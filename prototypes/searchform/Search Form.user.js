@@ -6,11 +6,11 @@
 // @author       Kevin Echols
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css
+// @require      https://raw.githubusercontent.com/bressljr/searchform/master/selecty.js
+// @resource     customcss https://raw.githubusercontent.com/bressljr/searchform/master/styles.css?v=3
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.css
-// @resource     juriscss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/hummingbird-treeview.css
-// @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/juris.html
+// @resource     juriscss https://raw.githubusercontent.com/bressljr/searchform/master/hummingbird-treeview.css?v=5
+// @resource     jurishtml https://raw.githubusercontent.com/bressljr/searchform/master/juris.html?v=4
 // @match        https://advance.lexis.com/usresearchhome/*
 // @match        https://advance.lexis.com/canadaresearchhome/*
 // @match        https://advance.lexis.com/firsttime*
