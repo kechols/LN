@@ -25,7 +25,6 @@
 // @grant        GM_getValue
 // @grant        GM_deleteValue
 // ==/UserScript==
-debugger;
 
 (function() {
     'use strict';
