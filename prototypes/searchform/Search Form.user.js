@@ -1,19 +1,24 @@
 // ==UserScript==
-// @name         Search Form CA
+// @name         CA Search Form
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  New CA landing page search form
+// @description  New landing page search form
 // @author       Kevin Echols
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @require      https://raw.githubusercontent.com/kechols/LN/prototype/searchform/master/selecty.js
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css
-// @resource     selectycss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js
-// @resource     juriscss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/hummingbird-treeview.css
-// @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/juris.html
+// @require      https://raw.githubusercontent.com/bressljr/searchform/master/selecty.js
+// @resource     customcss https://raw.githubusercontent.com/bressljr/searchform/master/styles.css?v=3
+// @resource     selectycss https://raw.githubusercontent.com/bressljr/searchform/master/selecty.css?v=1
+// @resource     juriscss https://raw.githubusercontent.com/bressljr/searchform/master/hummingbird-treeview.css?v=5
+// @resource     jurishtml https://raw.githubusercontent.com/bressljr/searchform/master/juris.html?v=4
 // @match        https://advance.lexis.com/usresearchhome/*
+// @match        https://advance.lexis.com/canadaresearchhome/*
 // @match        https://advance.lexis.com/firsttime*
 // @match        https://advance.lexis.com/search*
+// @match        https://cert7-advance.lexis.com/usresearchhome/*
+// @match        https://cert7-advance.lexis.com/firsttime*
+// @match        https://cert7-advance.lexis.com/search*
+// @match        https://cert7-advance.lexis.com/canadaresearchhome/*
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
 // @grant        GM_setValue
@@ -258,7 +263,7 @@
 
     function setDate(datestring) {
         $('#date option').filter(function() {
-            return ($(this).text() == datestring); 
+            return ($(this).text() == datestring);
         }).prop('selected', true).trigger('change');
         $("button.adddate").prop('disabled', false).trigger('click');
     }
