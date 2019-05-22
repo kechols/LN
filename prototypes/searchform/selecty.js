@@ -433,10 +433,12 @@
           }
           his.btn.innerHTML +=this.options[selectedIndex].innerHTML;
         } else {
-          if (this.items[i].hasAttribute("country-image")){
+          if (this.items[0].hasAttribute("country-image")){
             this.btn.innerHTML = this.countrytemplate + this.options[0].innerHTML;  
           }
-          this.btn.innerHTML = this.options[0].innerHTML;
+          else {
+            this.btn.innerHTML = this.options[0].innerHTML;
+          }
         }
       }
 
