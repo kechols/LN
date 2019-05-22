@@ -429,12 +429,12 @@
           if(this.btn.innerHTML === '') divide = '';
           this.btn.innerHTML += divide;
           if (this.items[i].hasAttribute("country-image")){
-            this.btn.innerHTML += getFlagHtml(this.items[i]);  
+            this.btn.innerHTML += this.getFlagHtml(this.items[i]);  
           }
           his.btn.innerHTML +=this.options[selectedIndex].innerHTML;
         } else {
           if (this.items[selectedIndex].hasAttribute("country-image")){
-            this.btn.innerHTML = getFlagHtml(this.items[selectedIndex]) + this.options[selectedIndex].innerHTML;  
+            this.btn.innerHTML = this.getFlagHtml(this.items[selectedIndex]) + this.options[selectedIndex].innerHTML;  
           }
           else {
             this.btn.innerHTML = this.options[selectedIndex].innerHTML;
@@ -444,7 +444,7 @@
 
       if(this.btn.innerHTML === '') {
         if (this.options[0].hasAttribute("country-image")){
-          this.btn.innerHTML = getFlagHtml(this.options[0]) + this.options[0].innerHTML;  
+          this.btn.innerHTML = this.getFlagHtml(this.options[0]) + this.options[0].innerHTML;  
         }
         else {
           this.btn.innerHTML = this.options[0].innerHTML; // default set first option to btn html
