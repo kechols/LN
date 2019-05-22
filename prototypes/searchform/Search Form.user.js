@@ -52,6 +52,10 @@
         $(".highlanderpod, .getadoc, .searchbox .options").remove();
         $(".ct-landing-wrapper").removeClass("pagewrapper");
 
+        // remove country selector from search box
+        $("span.continents").hide();
+
+
         //Wrap search section in container (grid)
         $('.pod-wrapper.searchbox').wrap( "<div class='searchsection'><div></div></div>" );
 

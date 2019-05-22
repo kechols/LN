@@ -429,10 +429,14 @@
           this.btn.innerHTML += divide+this.options[selectedIndex].innerHTML;
         } else {
           this.btn.innerHTML = this.options[selectedIndex].innerHTML;
+          $("a.selecty-selected img").show();
         }
       }
 
-      if(this.btn.innerHTML === '') this.btn.innerHTML = this.options[0].innerHTML; // default set first option to btn html
+      if(this.btn.innerHTML === '') {
+        this.btn.innerHTML = this.options[0].innerHTML; // default set first option to btn html
+        $("a.selecty-selected img").show();
+      }
     },
 
     /** 
