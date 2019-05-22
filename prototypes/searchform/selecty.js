@@ -203,8 +203,9 @@
     
 
     this.template = '<div class="selecty">'+
+                      '<a class="selecty-selected">' + 
                       '<img src="/Images/FlagCA24.png" alt="Canada Flag" title="Canada Flag">'+
-                      '<a class="selecty-selected"></a>'+
+                      '</a>'+
                       '<ul class="selecty-options"></ul>'+
                     '</div>';
 
