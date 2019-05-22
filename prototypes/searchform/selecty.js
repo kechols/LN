@@ -443,7 +443,7 @@
       }
 
       if(this.btn.innerHTML === '') {
-        if (this.items[selectedIndex].hasAttribute("country-image")){
+        if (this.options[0].hasAttribute("country-image")){
           this.btn.innerHTML = this.countrytemplate + this.options[0].innerHTML;  
         }
         else {
