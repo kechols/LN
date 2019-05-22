@@ -468,9 +468,10 @@
      *
      */
     getFlagHtml: function(selection) {
+      selection = $(selection);
       var flagTemplate = '<img src="/Images/country-image=" alt="country-text" title="country-text">';
-      flagTemplate = flagTemplate.replace(new RegExp('country-image', 'g'), selection.attribute('country-image'));
-      flagTemplate = flagTemplate.replace(new RegExp('country-text', 'g'), selection.attribute('country-text'));
+      flagTemplate = flagTemplate.replace(new RegExp('country-image', 'g'), selection.attr('country-image'));
+      flagTemplate = flagTemplate.replace(new RegExp('country-text', 'g'), selection.attr('country-text'));
       return flagTemplate;
     }
   };
