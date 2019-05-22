@@ -207,7 +207,7 @@
                       '<ul class="selecty-options"></ul>'+
                     '</div>';
 
-    this.countrytemplate = '<img src="/Images/FlagCA24.png" alt="Canada Flag" title="Canada Flag">';
+    this.countrytemplate = '<img src="/Images/country-image" alt="replace_text" title="country-text">';
 
     this.init(el);
   };
@@ -429,12 +429,12 @@
           if(this.btn.innerHTML === '') divide = '';
           this.btn.innerHTML += divide;
           if (this.items[i].hasAttribute("country-image")){
-            this.btn.innerHTML += this.countrytemplate;  
+            this.btn.innerHTML += getFlagHtml(this.items[i]);  
           }
           his.btn.innerHTML +=this.options[selectedIndex].innerHTML;
         } else {
           if (this.items[selectedIndex].hasAttribute("country-image")){
-            this.btn.innerHTML = this.countrytemplate + this.options[selectedIndex].innerHTML;  
+            this.btn.innerHTML = getFlagHtml(this.items[selectedIndex]) + this.options[selectedIndex].innerHTML;  
           }
           else {
             this.btn.innerHTML = this.options[selectedIndex].innerHTML;
@@ -444,7 +444,7 @@
 
       if(this.btn.innerHTML === '') {
         if (this.options[0].hasAttribute("country-image")){
-          this.btn.innerHTML = this.countrytemplate + this.options[0].innerHTML;  
+          this.btn.innerHTML = getFlagHtml(this.options[0]) + this.options[0].innerHTML;  
         }
         else {
           this.btn.innerHTML = this.options[0].innerHTML; // default set first option to btn html
@@ -461,6 +461,17 @@
         this.options[i].removeAttribute('selected');
         commonUse.removeClass(this.optionLi[i], 'selected');
       }
+    },
+
+    /** 
+     * [Get Country Flag]
+     *
+     */
+    getFlagHtml: function(selection) {
+      var flagTemplate = '<img src="/Images/country-image=" alt="country-text" title="country-text">';
+      flagTemplate = flagTemplate.replace(new RegExp('country-image', 'g'), selection.attribute('country-image'));
+      flagTemplate = flagTemplate.replace(new RegExp('country-text', 'g'), selection.attribute('country-text'));
+      return flagTemplate;
     }
   };
 
