@@ -433,7 +433,7 @@
           }
           his.btn.innerHTML +=this.options[selectedIndex].innerHTML;
         } else {
-          if (this.items[0].hasAttribute("country-image")){
+          if (this.items[selectedIndex].hasAttribute("country-image")){
             this.btn.innerHTML = this.countrytemplate + this.options[selectedIndex].innerHTML;  
           }
           else {
@@ -443,7 +443,12 @@
       }
 
       if(this.btn.innerHTML === '') {
-        this.btn.innerHTML = this.options[0].innerHTML; // default set first option to btn html
+        if (this.items[selectedIndex].hasAttribute("country-image")){
+          this.btn.innerHTML = this.countrytemplate + this.options[0].innerHTML;  
+        }
+        else {
+          this.btn.innerHTML = this.options[0].innerHTML; // default set first option to btn html
+        }
       }
     },
 
