@@ -203,11 +203,11 @@
     
 
     this.template = '<div class="selecty">'+
-                      '<a class="selecty-selected">' + 
-                      '<img src="/Images/FlagCA24.png" alt="Canada Flag" title="Canada Flag">'+
-                      '</a>'+
+                      '<a class="selecty-selected"></a>'+
                       '<ul class="selecty-options"></ul>'+
                     '</div>';
+
+    this.countrytemplate = '<img src="/Images/FlagCA24.png" alt="Canada Flag" title="Canada Flag">';
 
     this.init(el);
   };
@@ -427,16 +427,21 @@
         if (this.multiple) { // multiple
           var divide = this.settings.separator; // get selected text divide
           if(this.btn.innerHTML === '') divide = '';
-          this.btn.innerHTML += divide+this.options[selectedIndex].innerHTML;
+          this.btn.innerHTML += divide;
+          if (this.items[i].hasAttribute("country-image")){
+            this.btn.innerHTML += this.countrytemplate;  
+          }
+          his.btn.innerHTML +=this.options[selectedIndex].innerHTML;
         } else {
-          this.btn.innerHTML = this.options[selectedIndex].innerHTML;
-          $("a.selecty-selected img").show();
+          if (this.items[i].hasAttribute("country-image")){
+            this.btn.innerHTML += this.countrytemplate;  
+          }
+          this.btn.innerHTML = this.options[0].innerHTML;
         }
       }
 
       if(this.btn.innerHTML === '') {
         this.btn.innerHTML = this.options[0].innerHTML; // default set first option to btn html
-        $("a.selecty-selected img").show();
       }
     },
 
