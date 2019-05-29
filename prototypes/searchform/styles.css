@@ -1,6 +1,7 @@
 /* Container styling */
 .searchsection {
-    /* kechols background: #e9e9ea; */
+    /* kechols comment out background color */
+    background: #e9e9ea;
     padding-bottom: 50px;
 }
 
@@ -98,7 +99,7 @@ a.selecty-selected > span {
   margin:0;
   border:none !important;
   height:1px;
-  background:#d2d4d5;
+  background:#fff;
 }
 
 .moreoptions {
@@ -109,9 +110,20 @@ a.selecty-selected > span {
 }
 
 .moreoptions > button {
-    background:#fff;
-    padding:15px 25px;
-    border-radius:15px;
+    width: 170px;
+    border-radius: 20px;
+    border: 1px solid #d7dadb;
+    background-color: #fff;
+    color: #0067b1;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Lato;
+    font-size: 14px;
+    height: 40px;
+    box-shadow: 0 2px 7px 0 rgba(0,0,0,.07);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .moreoptions > button:after {
