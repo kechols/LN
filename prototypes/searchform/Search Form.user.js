@@ -7,7 +7,7 @@
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js?vke1
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?vke8
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.css
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/juris.html
@@ -49,11 +49,17 @@
 
 
         //REMOVE UNUSED ELEMENTS
-        $(".highlanderpod, .getadoc, .searchbox .options").remove();
-        $(".ct-landing-wrapper").removeClass("pagewrapper");
+        // $(".highlanderpod, .getadoc, .searchbox .options").remove();
+        // $(".ct-landing-wrapper").removeClass("pagewrapper");
 
-        // remove country selector from search box
+        // kechols - remove country selector from search box
         $("span.continents").hide();
+
+        // kechols - remove options like search everything next to searcbox
+        $("section span.options").hide();
+
+        // kechols - remove advance search links under within
+        $("ul.advancesearch").hide();
 
 
         //Wrap search section in container (grid)
@@ -61,20 +67,18 @@
 
 
         //INJECT HLCT, JURIS, ETC.
-        $('.searchsection > div').prepend('<div class="juris prefilter"><label for="juris">within</label><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions and Courts"><i>All Jurisdictions and Courts</i></a></div></div>');
-        $('.searchsection > div').prepend('<div class="hlct prefilter"><label for="hlct">starting in</label><select id="hlct"><option value="urn:hlct:5" country-image="FlagCA24.png" country-text="Canada Flag">Cases</option><option value="urn:hlct:15" country-image="FlagCA24.png" country-text="Canada Flag">Statutes and Legislation</option><option value="urn:hlct:3" country-image="FlagCA24.png" country-text="Canada Flag">Secondary Materials</option><option value="urn:hlct:2" country-image="FlagCA24.png" country-text="Canada Flag">Administrative Materials<option value="urn:hlct:4">Briefs, Pleadings and Motions<option value="urn:hlct:1" country-image="FlagCA24.png" country-text="Canada Flag">Administrative Codes and Regulations<option value="urn:hlct:10" country-image="FlagCA24.png" country-text="Canada Flag">Forms<option value="urn:hlct:16" country-image="FlagCA24.png" country-text="Canada Flag">News<option value="urn:hlct:14" country-image="FlagCA24.png" country-text="Canada Flag">Legal News<option value="urn:hlct:8" country-image="FlagCA24.png" country-text="Canada Flag">Dockets<option value="urn:hlct:13" country-image="FlagCA24.png" country-text="Canada Flag">Jury Verdicts and Settlements<option value="urn:hlct:12" country-image="FlagCA24.png" country-text="Canada Flag">Jury Instructions<option value="urn:hlct:9" country-image="FlagCA24.png" country-text="Canada Flag">Expert Witness Materials<option value="urn:hlct:6" country-image="FlagCA24.png" country-text="Canada Flag">Company and Financial<option value="urn:hlct:7" country-image="FlagCA24.png" country-text="Canada Flag">Directories<option value="urn:hlct:18" country-image="FlagCA24.png" country-text="Canada Flag">Scientific<option value="urn:hlct:11" country-image="FlagCA24.png" country-text="Canada Flag">Intellectual Property</select></div>');
+        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions and Courts"><i>All Jurisdictions and Courts</i></a></div></div>';
+        var hlct = '<div class="hlct prefilter"><select id="hlct"><option value="urn:hlct:5" country-image="FlagCA24.png" country-text="Canada Flag">Cases</option><option value="urn:hlct:15" country-image="FlagCA24.png" country-text="Canada Flag">Statutes and Legislation</option><option value="urn:hlct:3" country-image="FlagCA24.png" country-text="Canada Flag">Secondary Materials</option><option value="urn:hlct:2" country-image="FlagCA24.png" country-text="Canada Flag">Administrative Materials<option value="urn:hlct:4">Briefs, Pleadings and Motions<option value="urn:hlct:1" country-image="FlagCA24.png" country-text="Canada Flag">Administrative Codes and Regulations<option value="urn:hlct:10" country-image="FlagCA24.png" country-text="Canada Flag">Forms<option value="urn:hlct:16" country-image="FlagCA24.png" country-text="Canada Flag">News<option value="urn:hlct:14" country-image="FlagCA24.png" country-text="Canada Flag">Legal News<option value="urn:hlct:8" country-image="FlagCA24.png" country-text="Canada Flag">Dockets<option value="urn:hlct:13" country-image="FlagCA24.png" country-text="Canada Flag">Jury Verdicts and Settlements<option value="urn:hlct:12" country-image="FlagCA24.png" country-text="Canada Flag">Jury Instructions<option value="urn:hlct:9" country-image="FlagCA24.png" country-text="Canada Flag">Expert Witness Materials<option value="urn:hlct:6" country-image="FlagCA24.png" country-text="Canada Flag">Company and Financial<option value="urn:hlct:7" country-image="FlagCA24.png" country-text="Canada Flag">Directories<option value="urn:hlct:18" country-image="FlagCA24.png" country-text="Canada Flag">Scientific<option value="urn:hlct:11" country-image="FlagCA24.png" country-text="Canada Flag">Intellectual Property</select></div>';
+        $(juris).insertAfter($(".input"));
+        $(hlct).insertAfter($(".input"));
 
-        $('.searchsection > div').append('<div class="appliedfilters"><span>Narrow by:</span></div>');
-        $('.searchsection > div').append('<div class="clearlink"><a href="#" id="clearform">Clear Search Filters</a></div>');
 
         //INJECT MORE OPTIONS
         $('.searchsection > div')
             .append('<div class="divider moreopts"></div>')
             .append('<div class="prefilter moreopts pat"><label for="pat">practice areas</label><select multiple id="pat"><option>All Practice Areas</option></select></div>')
-            .append('<div class="prefilter moreopts favs"><label for="favs">recent / favorites</label><select id="favs"><option>Select Recent or Favorite</option></select></div>')
-            .append('<div id="datefilters" class="moreopts"><button type="button" value="Previous Year">within 1 year</button><button type="button" value="Previous 5 Years">within 5 years</button><button type="button" value="Previous 10 Years">within 10 years</button></div>')
-            .append('<div class="moreoptions"><button type="button"></button></div>')
-            .prepend('<h2 class="sectionheader">Search</h2>');
+            .append('<div class="prefilter moreopts favs"><label for="favs">recent and favorite filters</label><select id="favs"><option>View Recent and Favorite Filters</option></select></div>')
+            .append('<div class="moreoptions"><button type="button"></button></div>');
 
         //INJECT CLEAR FORM BUTTON
         $('#clearform').click(function() {
