@@ -98,8 +98,8 @@ a.selecty-selected > span {
   padding:0 !important;
   margin:0;
   border:none !important;
-  height:1px;
-  background:#fff;
+  height:3px;
+  background: rgb(143, 43, 140);
 }
 
 .moreoptions {
