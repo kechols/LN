@@ -7,7 +7,7 @@
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js?vke1
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?vke8
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?vkte1
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.css
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/juris.html
@@ -67,7 +67,7 @@
 
 
         //INJECT HLCT, JURIS, ETC.
-        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions and Courts"><i>All Jurisdictions and Courts</i></a></div></div>';
+        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions/courts"><i>All Jurisdictions/courts</i></a></div></div>';
         var hlct = '<div class="hlct prefilter"><select id="hlct"><option value="urn:hlct:5" country-image="FlagCA24.png" country-text="Canada Flag">Cases</option><option value="urn:hlct:15" country-image="FlagCA24.png" country-text="Canada Flag">Statutes and Legislation</option><option value="urn:hlct:3" country-image="FlagCA24.png" country-text="Canada Flag">Secondary Materials</option><option value="urn:hlct:2" country-image="FlagCA24.png" country-text="Canada Flag">Administrative Materials<option value="urn:hlct:4">Briefs, Pleadings and Motions<option value="urn:hlct:1" country-image="FlagCA24.png" country-text="Canada Flag">Administrative Codes and Regulations<option value="urn:hlct:10" country-image="FlagCA24.png" country-text="Canada Flag">Forms<option value="urn:hlct:16" country-image="FlagCA24.png" country-text="Canada Flag">News<option value="urn:hlct:14" country-image="FlagCA24.png" country-text="Canada Flag">Legal News<option value="urn:hlct:8" country-image="FlagCA24.png" country-text="Canada Flag">Dockets<option value="urn:hlct:13" country-image="FlagCA24.png" country-text="Canada Flag">Jury Verdicts and Settlements<option value="urn:hlct:12" country-image="FlagCA24.png" country-text="Canada Flag">Jury Instructions<option value="urn:hlct:9" country-image="FlagCA24.png" country-text="Canada Flag">Expert Witness Materials<option value="urn:hlct:6" country-image="FlagCA24.png" country-text="Canada Flag">Company and Financial<option value="urn:hlct:7" country-image="FlagCA24.png" country-text="Canada Flag">Directories<option value="urn:hlct:18" country-image="FlagCA24.png" country-text="Canada Flag">Scientific<option value="urn:hlct:11" country-image="FlagCA24.png" country-text="Canada Flag">Intellectual Property</select></div>';
         $(juris).insertAfter($(".input"));
         $(hlct).insertAfter($(".input"));
@@ -94,7 +94,7 @@
         //FORM SUBMISSION ACTIONS
         $("#searchTerms")
             .val("")
-            .attr("placeholder","Enter Search Terms, Keywords, Citation, or shep: to Shepardize®")
+            .attr("placeholder","Enter a source name, a citation, terms or shep: [citation] to Shepardize®.")
             .keyup(function(e) {
                var code = e.keyCode ? e.keyCode : e.which;
                if (code == 13) {  // Enter keycode
