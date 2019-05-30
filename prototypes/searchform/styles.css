@@ -76,6 +76,13 @@ a.selecty-selected > span {
   grid-column-start: 1; 
   grid-column-end: 7; 
 }
+
+/* kechols - advancesearchfilters and tips */
+.searchsection #advancesearchfilters.moreopts {
+    grid-column-start: 1; 
+    grid-column-end: 7; 
+  }
+
 .searchsection #datefilters > button {
     padding: 10px 24px;
     height: auto;
