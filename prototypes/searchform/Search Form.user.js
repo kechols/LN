@@ -6,7 +6,7 @@
 // @author       Kevin Echols
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js?vke1
+// @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js?vke5
 // @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?vke5
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.css
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/hummingbird-treeview.css
@@ -76,8 +76,8 @@
         //INJECT MORE OPTIONS
         $('.searchsection > div')
             .append('<div class="divider moreopts"></div>')
-            .append('<div class="prefilter moreopts pat"><label for="pat">practice areas</label><select multiple id="pat"><option>All Practice Areas</option></select></div>')
-            .append('<div class="prefilter moreopts favs"><label for="favs">recent and favorite filters</label><select id="favs"><option>View Recent and Favorite Filters</option></select></div>')
+            .append('<div style="border:0" class="prefilter moreopts"><label for="pat">practice areas</label><div class="prefilter moreopts pat"><select multiple id="pat"><option>All Practice Areas</option></select></div></div>')
+            .append('<div style="border:0" class="prefilter moreopts"><label for="favs">recent and favorite filters</label><div class="prefilter moreopts favs"><select id="favs"><option>View Recent and Favorite Filters</option></select></div></div>')
             .append('<div class="moreoptions"><button type="button"></button></div>');
 
         //INJECT CLEAR FORM BUTTON
