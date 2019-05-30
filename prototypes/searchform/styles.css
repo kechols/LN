@@ -288,6 +288,8 @@ a.selecty-selected > span {
     display:none;
 }
 */
+
+/*  kechols to bring back pods
 .browse .globalpod-header {
     display: none;
 }
@@ -303,6 +305,8 @@ a.selecty-selected > span {
 .browse ul.tabheaders {
     background:none;
 }
+
+*/
 
 .browse ul.tabheaders button {
     border:none !important;
