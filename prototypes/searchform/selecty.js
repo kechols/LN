@@ -431,7 +431,7 @@
           if (this.items[i].hasAttribute("country-image")){
             this.btn.innerHTML += this.getFlagHtml(this.items[i]);  
           }
-          his.btn.innerHTML +=this.options[selectedIndex].innerHTML;
+          this.btn.innerHTML +=this.options[selectedIndex].innerHTML;
         } else {
           if (this.items[selectedIndex].hasAttribute("country-image")){
             this.btn.innerHTML = this.getFlagHtml(this.items[selectedIndex]) + this.options[selectedIndex].innerHTML;  
