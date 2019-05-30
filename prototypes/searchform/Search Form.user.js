@@ -61,6 +61,9 @@
         // kechols - remove advance search links under within
         $("ul.advancesearch").hide();
 
+        // kechols - add spacing to header
+        $(".headerpod-wrapper header h1").css({"line-height" : "12.5rem"});
+
 
         //Wrap search section in container (grid)
         $('.pod-wrapper.searchbox').wrap( "<div class='searchsection'><div></div></div>" );
