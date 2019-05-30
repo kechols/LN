@@ -7,7 +7,7 @@
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js?vke1
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?vkte1
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?vke5
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.css
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/juris.html
@@ -60,10 +60,6 @@
 
         // kechols - remove advance search links under within
         $("ul.advancesearch").hide();
-
-        // kechols - add spacing to header
-        $(".headerpod-wrapper header h1").css({"line-height" : "12.5rem"});
-
 
         //Wrap search section in container (grid)
         $('.pod-wrapper.searchbox').wrap( "<div class='searchsection'><div></div></div>" );
