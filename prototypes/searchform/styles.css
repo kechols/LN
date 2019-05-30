@@ -69,7 +69,7 @@ a.selecty-selected > span {
 /* More Options + Filters */
 .searchsection .prefilter.moreopts {
   grid-column: span 3;
-  padding: 5px 0px;
+  padding: 8px 0px;
 }
 
 .searchsection #datefilters.moreopts {
