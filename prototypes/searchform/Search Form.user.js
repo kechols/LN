@@ -58,15 +58,16 @@
         // kechols - remove options like search everything next to searcbox
         $("section span.options").hide();
 
-        // kechols - remove advance search links under within
-        $("ul.advancesearch").hide();
+        // kechols - remove advance search links
+        $(".advancesearch li button")[1].textContent = "Tips"
+        // $("ul.advancesearch").hide();
 
         //Wrap search section in container (grid)
         $('.pod-wrapper.searchbox').wrap( "<div class='searchsection'><div></div></div>" );
 
 
         //INJECT HLCT, JURIS, ETC.
-        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions/courts"><i>All Jurisdictions/courts</i></a></div></div>';
+        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions"><i>All Jurisdictions</i></a></div></div>';
         var hlct = '<div class="hlct prefilter"><select id="hlct"><option value="urn:hlct:5" country-image="FlagCA24.png" country-text="Canada Flag">Cases</option><option value="urn:hlct:15" country-image="FlagCA24.png" country-text="Canada Flag">Statutes and Legislation</option><option value="urn:hlct:3" country-image="FlagCA24.png" country-text="Canada Flag">Secondary Materials</option><option value="urn:hlct:2" country-image="FlagCA24.png" country-text="Canada Flag">Administrative Materials<option value="urn:hlct:4">Briefs, Pleadings and Motions<option value="urn:hlct:1" country-image="FlagCA24.png" country-text="Canada Flag">Administrative Codes and Regulations<option value="urn:hlct:10" country-image="FlagCA24.png" country-text="Canada Flag">Forms<option value="urn:hlct:16" country-image="FlagCA24.png" country-text="Canada Flag">News<option value="urn:hlct:14" country-image="FlagCA24.png" country-text="Canada Flag">Legal News<option value="urn:hlct:8" country-image="FlagCA24.png" country-text="Canada Flag">Dockets<option value="urn:hlct:13" country-image="FlagCA24.png" country-text="Canada Flag">Jury Verdicts and Settlements<option value="urn:hlct:12" country-image="FlagCA24.png" country-text="Canada Flag">Jury Instructions<option value="urn:hlct:9" country-image="FlagCA24.png" country-text="Canada Flag">Expert Witness Materials<option value="urn:hlct:6" country-image="FlagCA24.png" country-text="Canada Flag">Company and Financial<option value="urn:hlct:7" country-image="FlagCA24.png" country-text="Canada Flag">Directories<option value="urn:hlct:18" country-image="FlagCA24.png" country-text="Canada Flag">Scientific<option value="urn:hlct:11" country-image="FlagCA24.png" country-text="Canada Flag">Intellectual Property</select></div>';
         $(juris).insertAfter($(".input"));
         $(hlct).insertAfter($(".input"));
