@@ -63,13 +63,13 @@ a.selecty-selected > span {
   min-width:0px;
   background:#fff;
   position:relative;
-  padding:5px 10px;
   border:1px solid #d2d4d5;
 }
 
 /* More Options + Filters */
 .searchsection .prefilter.moreopts {
   grid-column: span 3;
+  padding: 0px;
 }
 
 .searchsection #datefilters.moreopts {
