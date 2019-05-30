@@ -7,7 +7,7 @@
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js?vke5
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?vke5
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?vktechols64
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.css
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/juris.html
@@ -58,10 +58,6 @@
         // kechols - remove options like search everything next to searcbox
         $("section span.options").hide();
 
-        // kechols - remove advance search links
-        $(".advancesearch li button")[1].textContent = "Tips"
-        // $("ul.advancesearch").hide();
-
         //Wrap search section in container (grid)
         $('.pod-wrapper.searchbox').wrap( "<div class='searchsection'><div></div></div>" );
 
@@ -74,12 +70,28 @@
         $(".input").css({"border": "1px solid #d2d4d5"});
 
 
-        //INJECT MORE OPTIONS
+        //INJECT MORE OPTIONS        
         $('.searchsection > div')
             .append('<div class="divider moreopts"></div>')
             .append('<div style="border:0" class="prefilter moreopts"><label for="pat">practice areas</label><div class="prefilter moreopts pat"><select multiple id="pat"><option>All Practice Areas</option></select></div></div>')
             .append('<div style="border:0" class="prefilter moreopts"><label for="favs">recent and favorite filters</label><div class="prefilter moreopts favs"><select id="favs"><option>View Recent and Favorite Filters</option></select></div></div>')
+            .append('<div id="advancesearchfilters" class="moreopts"></div>')
             .append('<div class="moreoptions"><button type="button"></button></div>');
+
+        // kechols -clone and put the addvance search and tips under more options
+        $(".advancesearch li button")[1].textContent = "Tips";
+        $("#advancesearchfilters").append($(".advancesearch").clone());
+        // kechols - hide the original location from the eyes but leave for clicking
+        // $(".landing.searchbox .advancesearch button").css({"color":"fff"});
+        // $("ul.advancesearch").hide();
+        // Pass the click events to the original buttons
+        $('#advancesearchfilters ul.advancesearch>li button').each(function(index){
+            $($(".landing.searchbox .advancesearch>li")[index]).css({"border" : "0"});
+             $($(".landing.searchbox .advancesearch button")[index]).css({"color" : "#fff"});
+            $(this).click(function() {
+               $(".landing.searchbox .advancesearch button")[index].click();
+           });
+        });
 
         //INJECT CLEAR FORM BUTTON
         $('#clearform').click(function() {
