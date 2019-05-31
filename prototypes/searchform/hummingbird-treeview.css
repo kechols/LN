@@ -107,9 +107,9 @@
 }
 
 
-.hummingbird-treeview ul:not(.hummingbird-base) {
+/* .hummingbird-treeview ul:not(.hummingbird-base) {
     display: none;
-}
+} */
 
 .hummingbird-treeview .icon::after, .hummingbird-treeview .icon::before {
     font-weight:bold;
