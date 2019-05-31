@@ -1,16 +1,19 @@
 // ==UserScript==
 // @name         CA Search Form
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  New landing page search form
 // @author       Kevin Echols
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js?vke5
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?fastkevin
+// @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js?23423423
+// @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecthlct.js?tretret
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?234234234
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.css
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/juris.html
+// @resource     selecthlct https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecthlct.html?23423423ewr322
+// @resource     selecthlctcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecthlct.css?4534543543534543543535434543
 // @match        https://advance.lexis.com/usresearchhome/*
 // @match        https://advance.lexis.com/canadaresearchhome/*
 // @match        https://advance.lexis.com/firsttime*
@@ -40,12 +43,15 @@
             selectyCSS = GM_getResourceText ("selectycss"),
             jurisCSS = GM_getResourceText ("juriscss"),
             faCSS = GM_getResourceText ("fontawesome"),
-            jurisHTML = GM_getResourceText ("jurishtml");
+            jurisHTML = GM_getResourceText ("jurishtml"),
+            selecthlctHTML = GM_getResourceText ("selecthlct"),
+            selecthlctCSS = GM_getResourceText ("selecthlctcss");
 
         GM_addStyle (customCSS);
         GM_addStyle (selectyCSS);
         GM_addStyle (jurisCSS);
         GM_addStyle (faCSS);
+        GM_addStyle (selecthlctCSS);
 
 
         //REMOVE UNUSED ELEMENTS
@@ -64,10 +70,14 @@
 
         //INJECT HLCT, JURIS, ETC.
         var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions/courts"><i>All Jurisdictions/courts</i></a></div></div>';
-        var hlct = '<div class="hlct prefilter"><select id="hlct"><option value="urn:hlct:5" country-image="FlagCA24.png" country-text="Canada Flag">Cases</option><option value="urn:hlct:15" country-image="FlagCA24.png" country-text="Canada Flag">Legislation</option><option value="urn:hlct:3" country-image="FlagCA24.png" country-text="Canada Flag">Quantums</option><option value="urn:hlct:2" country-image="FlagCA24.png" country-text="Canada Flag">Drafting Materials</option><option value="urn:hlct:4"  country-image="FlagCA24.png" country-text="Canada Flag">Secondary Materials</option><option value="urn:hlct:1" country-image="FlagCA24.png" country-text="Canada Flag">Dictionaries</option><option value="urn:hlct:10" country-image="FlagCA24.png" country-text="Canada Flag">News</option></select></div>';
+        // var hlct = '<div class="hlct prefilter"><select id="hlct"><option value="urn:hlct:5" country-image="FlagCA24.png" country-text="Canada Flag">Cases</option><option value="urn:hlct:15" country-image="FlagCA24.png" country-text="Canada Flag">Legislation</option><option value="urn:hlct:3" country-image="FlagCA24.png" country-text="Canada Flag">Quantums</option><option value="urn:hlct:2" country-image="FlagCA24.png" country-text="Canada Flag">Drafting Materials</option><option value="urn:hlct:4"  country-image="FlagCA24.png" country-text="Canada Flag">Secondary Materials</option><option value="urn:hlct:1" country-image="FlagCA24.png" country-text="Canada Flag">Dictionaries</option><option value="urn:hlct:10" country-image="FlagCA24.png" country-text="Canada Flag">News</option></select></div>';
+        var hlct = '<div class="hlct prefilter"></div>';
         $(juris).insertAfter($(".input"));
         $(hlct).insertAfter($(".input"));
+        $("div.hlct.prefilter").append(selecthlctHTML);
         $(".input").css({"border": "1px solid #d2d4d5"});
+
+        enableSelectBoxes();
 
 
         //INJECT MORE OPTIONS
@@ -179,7 +189,7 @@
         waitForKeyElements(".ssat-filters", loadpat, true);
         waitForKeyElements(".recent-favorites-filters", loadfavs, true);
 
-        var hlctfilter = new selecty(document.getElementById('hlct'));
+        // var hlctfilter = new selecty(document.getElementById('hlct'));
 
 
         $('.pod-wrapper.browse')
