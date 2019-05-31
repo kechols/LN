@@ -18,6 +18,7 @@ div.selectBox {
 }
 
 span.selected {
+	margin-top: 5px;
 	font-size: 24px;
 	width: 167px;
 	text-indent: 20px;
@@ -37,8 +38,20 @@ span.selectArrow {
 	-moz-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-	background: #9FD573;
 	height: 100%;
+}
+
+span.seletArrow:after{
+	content: "";
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
 }
 
 span.selectArrow,span.selected {
@@ -70,6 +83,19 @@ span.selectOption, span.selectOptionGroup {
 	padding: 5px 10%;
 }
 
+span.selectOptionsGroup:after{
+	content: "";
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+}
+
 
 span.selectOption{
 	display: none;
@@ -83,6 +109,5 @@ span.selectOption:hover, span.selectOptionGroup:hover {
 span.selectOptionGroup {
 	display: block;
 	font-weight: bold;
-	font-style: italic;
 }
 		
