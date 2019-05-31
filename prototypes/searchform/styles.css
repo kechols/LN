@@ -389,9 +389,9 @@ h2.sectionheader {
     margin: 0px;
 }
 
-.hummingbird-treeview ul:not(.hummingbird-base) {
+/* .hummingbird-treeview ul:not(.hummingbird-base) {
     display: none;
-}
+} */
 
 .hummingbird-treeview .fa {
     font-style: normal;
