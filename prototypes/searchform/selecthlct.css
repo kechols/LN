@@ -2,6 +2,10 @@
 	height:0px;
 }
 
+.content-type-panel{
+	height: 100%;
+}
+
 div.selectBox {
 	position: relative;
 	display: inline-block;
@@ -10,23 +14,20 @@ div.selectBox {
 	line-height: 30px;
 	clear: both;
 	color: #888;
-	margin-top: 20px;
+	height: 100%
 }
 
 span.selected {
+	font-size: 24px;
 	width: 167px;
 	text-indent: 20px;
-	border: 1px solid #ccc;
 	border-right: none;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	background: #f6f6f6;
 	overflow: hidden;
+	height:100%
 }
 
 span.selectArrow {
 	width: 30px;
-	border: 1px solid #9FD573;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	text-align: center;
@@ -37,6 +38,7 @@ span.selectArrow {
 	-o-user-select: none;
 	user-select: none;
 	background: #9FD573;
+	height: 100%;
 }
 
 span.selectArrow,span.selected {
