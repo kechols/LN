@@ -105,5 +105,7 @@ span.selectOption:hover, span.selectOptionGroup:hover {
 span.selectOptionGroup {
 	display: block;
 	font-weight: bold;
+	background: darkgray;
+    color: white;
 }
 		
