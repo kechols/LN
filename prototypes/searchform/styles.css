@@ -374,6 +374,7 @@ h2.sectionheader {
     list-style: none;
     font-size: 20px;
     line-height: 24px;
+    white-space: nowrap;
 }
 
 .hummingbird-treeview label {
