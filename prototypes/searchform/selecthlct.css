@@ -44,13 +44,12 @@ span.selectArrow {
 span.selectArrow,span.selected {
 	position: relative;
 	float: left;
-	height: 30px;
 	z-index: 1;
 }
 
 div.selectOptions {
 	position: absolute;
-	top: 28px;
+	top: 55px;
 	left: 0;
 	width: 198px;
 	border: 1px solid #ccc;
@@ -62,6 +61,7 @@ div.selectOptions {
 	display: none;
 	max-height: 400px;
 	overflow: auto;
+	z-index: 1;
 }
 
 span.selectOption, span.selectOptionGroup {
