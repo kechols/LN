@@ -63,14 +63,14 @@
 
 
         //INJECT HLCT, JURIS, ETC.
-        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions"><i>All Jurisdictions</i></a></div></div>';
+        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions/courts"><i>All Jurisdictions/courts</i></a></div></div>';
         var hlct = '<div class="hlct prefilter"><select id="hlct"><option value="urn:hlct:5" country-image="FlagCA24.png" country-text="Canada Flag">Cases</option><option value="urn:hlct:15" country-image="FlagCA24.png" country-text="Canada Flag">Legislation</option><option value="urn:hlct:3" country-image="FlagCA24.png" country-text="Canada Flag">Quantums</option><option value="urn:hlct:2" country-image="FlagCA24.png" country-text="Canada Flag">Drafting Materials</option><option value="urn:hlct:4"  country-image="FlagCA24.png" country-text="Canada Flag">Secondary Materials</option><option value="urn:hlct:1" country-image="FlagCA24.png" country-text="Canada Flag">Dictionaries</option><option value="urn:hlct:10" country-image="FlagCA24.png" country-text="Canada Flag">News</option></select></div>';
         $(juris).insertAfter($(".input"));
         $(hlct).insertAfter($(".input"));
         $(".input").css({"border": "1px solid #d2d4d5"});
 
 
-        //INJECT MORE OPTIONS        
+        //INJECT MORE OPTIONS
         $('.searchsection > div')
             .append('<div class="divider moreopts"></div>')
             .append('<div style="border:0" class="prefilter moreopts"><label for="pat">practice areas</label><div class="prefilter moreopts pat"><select multiple id="pat"><option>All Practice Areas</option></select></div></div>')
@@ -275,7 +275,7 @@
             $(".hlct .selecty-selected").html($(".hlct .selecty-options > li.selected").text());
             $(".favs .selecty-selected").html("Select Recent or Favorite");
             $(".pat .selecty-selected").html("All Practice Areas");
-            $(".juris .selecty-selected").html("All Jurisdictions and Courts");
+            $(".juris .selecty-selected").html("All Jurisdictions/courts");
             $('#clearform')[0].click();
         }
     }
