@@ -25,6 +25,7 @@ span.selected {
 	border-right: none;
 	overflow: hidden;
 	height:100%
+	color: rgb(27, 25, 25);
 }
 
 span.selectArrow {
@@ -41,7 +42,7 @@ span.selectArrow {
 	height: 100%;
 }
 
-span.seletArrow:after{
+span.selectArrow:after{
 	content: "";
     display: inline-block;
     position: absolute;
@@ -83,7 +84,7 @@ span.selectOption, span.selectOptionGroup {
 	padding: 5px 10%;
 }
 
-span.selectOptionsGroup:after{
+span.selectOptionGroup:after{
 	content: "";
     display: inline-block;
     position: absolute;
