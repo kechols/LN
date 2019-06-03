@@ -1,4 +1,19 @@
 function enableSelectBoxes(){
+	// Eevent handler to close selectbox when clicking outside
+	
+	$(document).mouseup(function(e) 
+	{
+		var container = $("div.selectBox.hlct");
+
+		// if the target of the click isn't the container nor a descendant of the container hide the selections
+		if (!container.is(e.target) && container.has(e.target).length === 0) 
+		{
+			var selections = $("div.selectOptions.selecty");
+			selections.hide();
+		}
+	});
+	
+
 	$('div.selectBox').each(function(){
 		$(this).children('span.selected').html($(this).children('div.selectOptions').children('span.selectOption:first').html());
 		$(this).attr('value',$(this).children('div.selectOptions').children('span.selectOption:first').attr('value'));
