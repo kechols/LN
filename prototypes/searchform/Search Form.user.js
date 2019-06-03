@@ -9,11 +9,11 @@
 // @require      https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecty.js?23423423
 // @require      https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecthlct.js?tretret
 // @resource     customcss https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/styles.css?234234234
-// @resource     selectycss https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecty.css
+// @resource     selectycss https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecty.css?313213
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/juris.html
-// @resource     selecthlct https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecthlct.html?23423423ewr322
-// @resource     selecthlctcss https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecthlct.css?4534543543534543543535434543
+// @resource     selecthlct https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecthlct.html?64565464
+// @resource     selecthlctcss https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecthlct.css?65856856
 // @match        https://advance.lexis.com/usresearchhome/*
 // @match        https://advance.lexis.com/canadaresearchhome/*
 // @match        https://advance.lexis.com/firsttime*
