@@ -72,6 +72,11 @@ a.selecty-selected > span {
   padding: 8px 0px;
 }
 
+.searchsection .searchfilters {
+    grid-column-start: 6; 
+    grid-column-end: 7; 
+  }
+
 .searchsection #datefilters.moreopts {
   grid-column-start: 1; 
   grid-column-end: 7; 
