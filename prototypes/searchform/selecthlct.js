@@ -31,6 +31,9 @@ function enableSelectBoxes(){
 					$(this).css("display", "block");
 				}
 			});
+			
+			// kechols fix to only have one group opem
+			$("span[group]").not("[group='" + group + "']").css("display", "none");
 		});
 	});
 }
