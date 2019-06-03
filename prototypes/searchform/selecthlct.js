@@ -14,10 +14,10 @@ function enableSelectBoxes(){
 		});
 
 		$(this).find('span.selectOption').click(function(){
-			debugger;
+			var imageHtml = $('<span>').append($('span.selectOptionGroup[value=' + $(this).attr("group") + '] > img').clone()).html();
 			$(this).parent().parent().css('display','none');
 			$(this).closest('div.selectBox').attr('value',$(this).attr('value'));
-			$(this).parent().parent().siblings('span.selected').html($(this).html());
+			$(this).parent().parent().siblings('span.selected').html(imageHtml + $(this).html());
 			$("#filter_type").val($(this).attr("group"));
 			$("#filter_value").val($(this).attr("value"));
 		});
