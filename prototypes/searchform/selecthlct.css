@@ -20,12 +20,13 @@ div.selectBox {
 span.selected {
 	margin-top: 12px;
 	font-size: 2.0rem;
-	width: 167px;
+	width: 235px;
 	text-indent: 20px;
 	border-right: none;
 	overflow: hidden;
 	height:100%;
 	color: rgb(27, 25, 25);
+	white-space: nowrap;
 }
 
 span.selectArrow {
