@@ -14,6 +14,7 @@ function enableSelectBoxes(){
 		});
 
 		$(this).find('span.selectOption').click(function(){
+			debugger;
 			$(this).parent().parent().css('display','none');
 			$(this).closest('div.selectBox').attr('value',$(this).attr('value'));
 			$(this).parent().parent().siblings('span.selected').html($(this).html());
