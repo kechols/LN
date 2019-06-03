@@ -18,14 +18,15 @@ div.selectBox {
 }
 
 span.selected {
-	margin-top: 5px;
-	font-size: 24px;
-	width: 167px;
+	margin-top: 12px;
+	font-size: 2.0rem;
+	width: 235px;
 	text-indent: 20px;
 	border-right: none;
 	overflow: hidden;
 	height:100%;
 	color: rgb(27, 25, 25);
+	white-space: nowrap;
 }
 
 span.selectArrow {
@@ -65,7 +66,7 @@ div.selectOptions {
 	position: absolute;
 	top: 55px;
 	left: 0;
-	width: 198px;
+	width: 275px;
 	border: 1px solid #ccc;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
@@ -86,10 +87,12 @@ span.selectOption, span.selectOptionGroup {
 
 span.selectOptionGroup{
 	font-weight: bold;
+	white-space: nowrap;
 }
 
 span.selectOption{
-	font-size: 16px;
+	font-size: 1.6rem;
+	background: #fff;
 }
 
 

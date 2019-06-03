@@ -1,19 +1,19 @@
 // ==UserScript==
 // @name         CA Search Form
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  New landing page search form
 // @author       Kevin Echols
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.js?23423423
-// @require      https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecthlct.js?tretret
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/styles.css?234234234
-// @resource     selectycss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecty.css
-// @resource     juriscss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/hummingbird-treeview.css
-// @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/juris.html
-// @resource     selecthlct https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecthlct.html?23423423ewr322
-// @resource     selecthlctcss https://raw.githubusercontent.com/kechols/LN/master/prototypes/searchform/selecthlct.css?4534543543534543543535434543
+// @require      https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecty.js?23423423
+// @require      https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecthlct.js?53253252345
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/styles.css?234234234
+// @resource     selectycss https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecty.css?313213
+// @resource     juriscss https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/hummingbird-treeview.css
+// @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/juris.html
+// @resource     selecthlct https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecthlct.html?545435435
+// @resource     selecthlctcss https://raw.githubusercontent.com/kechols/LN/version3/prototypes/searchform/selecthlct.css?545435435
 // @match        https://advance.lexis.com/usresearchhome/*
 // @match        https://advance.lexis.com/canadaresearchhome/*
 // @match        https://advance.lexis.com/firsttime*
