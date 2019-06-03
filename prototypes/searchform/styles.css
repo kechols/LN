@@ -72,7 +72,7 @@ a.selecty-selected > span {
   padding: 8px 0px;
 }
 
-.searchsection .myfilters {
+div.myfilters {
     grid-column-start: 6; 
     grid-column-end: 7;
     text-align: right;
