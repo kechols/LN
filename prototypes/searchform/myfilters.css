@@ -1,8 +1,8 @@
 .searchsection .myfilters {
     grid-column-start: 6; 
     grid-column-end: 7;
-    width: 250px !important;
-    height: 60px;
+    width: 250px;
+    margin-top: -5px;
   }
 
 #myfilters ul.remembermyfilters>li:first-child {
@@ -14,5 +14,4 @@
     float: left;
     padding: 0 5px;
 	border-left: 1px solid #bcbec0;
-	color: #06c;
 }
