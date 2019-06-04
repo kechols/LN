@@ -6,14 +6,16 @@
 // @author       Kevin Echols
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @require      https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/selecty.js?23423423
+// @require      https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/selecty.js?424214214
 // @require      https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/selecthlct.js?53253252345
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/styles.css?234234234
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/styles.css?32131333
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/selecty.css?313213
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/juris.html
 // @resource     selecthlct https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/selecthlct.html?545435435
 // @resource     selecthlctcss https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/selecthlct.css?545435435
+// @resource     myfiltershtml https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/myfilters.html?834134
+// @resource     myfilterscss https://raw.githubusercontent.com/kechols/LN/version4/prototypes/searchform/myfilters.css?19786345
 // @match        https://advance.lexis.com/usresearchhome/*
 // @match        https://advance.lexis.com/canadaresearchhome/*
 // @match        https://advance.lexis.com/firsttime*
@@ -45,14 +47,16 @@
             faCSS = GM_getResourceText ("fontawesome"),
             jurisHTML = GM_getResourceText ("jurishtml"),
             selecthlctHTML = GM_getResourceText ("selecthlct"),
-            selecthlctCSS = GM_getResourceText ("selecthlctcss");
+            selecthlctCSS = GM_getResourceText ("selecthlctcss"),
+            myfiltersHTML = GM_getResourceText ("myfiltershtml"),
+            myfiltersCSS = GM_getResourceText ("myfilterscss");
 
         GM_addStyle (customCSS);
         GM_addStyle (selectyCSS);
         GM_addStyle (jurisCSS);
         GM_addStyle (faCSS);
         GM_addStyle (selecthlctCSS);
-
+        GM_addStyle (myfiltersCSS);
 
         //REMOVE UNUSED ELEMENTS
         // $(".highlanderpod, .getadoc, .searchbox .options").remove();
@@ -70,7 +74,6 @@
 
         //INJECT HLCT, JURIS, ETC.
         var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions/courts"><i>All Jurisdictions/courts</i></a></div></div>';
-        // var hlct = '<div class="hlct prefilter"><select id="hlct"><option value="urn:hlct:5" country-image="FlagCA24.png" country-text="Canada Flag">Cases</option><option value="urn:hlct:15" country-image="FlagCA24.png" country-text="Canada Flag">Legislation</option><option value="urn:hlct:3" country-image="FlagCA24.png" country-text="Canada Flag">Quantums</option><option value="urn:hlct:2" country-image="FlagCA24.png" country-text="Canada Flag">Drafting Materials</option><option value="urn:hlct:4"  country-image="FlagCA24.png" country-text="Canada Flag">Secondary Materials</option><option value="urn:hlct:1" country-image="FlagCA24.png" country-text="Canada Flag">Dictionaries</option><option value="urn:hlct:10" country-image="FlagCA24.png" country-text="Canada Flag">News</option></select></div>';
         var hlct = '<div class="hlct prefilter"></div>';
         $(juris).insertAfter($(".input"));
         $(hlct).insertAfter($(".input"));
@@ -82,7 +85,7 @@
 
         //INJECT MORE OPTIONS
         $('.searchsection > div')
-            .append('<div class="searchfilters"><span>kevin</span></div>')
+            .append(myfiltersHTML)
             .append('<div class="divider moreopts"></div>')
             .append('<div style="border:0" class="prefilter moreopts"><label for="pat">practice areas</label><div class="prefilter moreopts pat"><select multiple id="pat"><option>All Practice Areas</option></select></div></div>')
             .append('<div style="border:0" class="prefilter moreopts"><label for="favs">recent and favorite filters</label><div class="prefilter moreopts favs"><select id="favs"><option>View Recent and Favorite Filters</option></select></div></div>')
@@ -192,7 +195,6 @@
 
         // var hlctfilter = new selecty(document.getElementById('hlct'));
 
-
         $('.pod-wrapper.browse')
             .wrap( "<div class='exploresection'></div>" )
             .prepend('<h2 class="sectionheader">Explore</h2>');
@@ -212,12 +214,11 @@
                 $(".appliedfilters button[data-id='"+sourceID+"']").remove();
                 sourceCheck();
             } else {
-                $("a.selecty-selected").html("N/A <span>(searching source)</span>");
+                // kechols - Fix a bug by commenting out
+                // $("a.selecty-selected").html("N/A <span>(searching source)</span>");
                 $(".appliedfilters").append('<button type="button" data-id="'+sourceID+'">'+$(this).closest("li").data("text")+'<span class="icon la-CloseRemove"></span></button>').show();
             }
         });
-
-
 
         $(document).on("click",".jurisfilter",function(e) {
             e.stopPropagation();
@@ -353,7 +354,8 @@
 
 
     function setSourceMode() {
-        $("a.selecty-selected").html("N/A <span>(searching source)</span>");
+        // kechols - Fix a bug by commenting out
+        // $("a.selecty-selected").html("N/A <span>(searching source)</span>");
 
         $(".deleteFilter[data-id*='~^'], .deleteFilter[data-id*='querytemplate']").each(function() {
              $(".appliedfilters").append('<button type="button" data-id="'+$(this).data("value")+'">'+$(this).find("span").text()+'<span class="icon la-CloseRemove"></span></button>').show();
