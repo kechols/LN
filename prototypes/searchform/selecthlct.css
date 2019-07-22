@@ -65,8 +65,8 @@ span.selectArrow,span.selected {
 div.selectOptions {
 	position: absolute;
 	top: 55px;
-	left: 0;
-	width: 275px;
+	left: -2px;
+	width: 265px;
 	border: 1px solid #ccc;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
