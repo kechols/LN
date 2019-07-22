@@ -71,7 +71,7 @@
 
 
         //INJECT HLCT, JURIS, ETC.
-        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions/courts"><i>All Jurisdictions/courts</i></a></div></div>';
+        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions"><i>All Jurisdictions</i></a></div></div>';
         var hlct = '<div class="hlct prefilter"></div>';
         $(juris).insertAfter($(".input"));
         $(hlct).insertAfter($(".input"));
@@ -285,7 +285,7 @@
             $(".hlct .selecty-selected").html($(".hlct .selecty-options > li.selected").text());
             $(".favs .selecty-selected").html("Select Recent or Favorite");
             $(".pat .selecty-selected").html("All Practice Areas");
-            $(".juris .selecty-selected").html("All Jurisdictions/courts");
+            $(".juris .selecty-selected").html("All Jurisdictions");
             $('#clearform')[0].click();
         }
     }
