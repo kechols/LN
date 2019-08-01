@@ -59,7 +59,6 @@ span.selectArrow:after{
 span.selectArrow,span.selected {
 	position: relative;
 	float: left;
-	z-index: 1;
 }
 
 div.selectOptions {
@@ -115,5 +114,11 @@ span.selectOptionGroup {
 	float: right;
 	color: #373739;
 	line-height: 31px;
+}
+
+img.flag {
+	vertical-align: middle; 
+	margin-right: 5px; 
+	margin-bottom: 5px;
 }
 		
