@@ -107,10 +107,12 @@ span.selectOption:hover, span.selectOptionGroup:hover {
 
 span.selectOptionGroup {
 	display: block;
-	background: #d3d3d3;
+	background: #f4f4f5;
+	color: #6d6e71
 }
 
 .icon:after {
 	float: right;
+	color: #6d6e71
 }
 		
