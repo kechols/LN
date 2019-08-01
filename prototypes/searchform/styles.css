@@ -173,7 +173,7 @@ a.selecty-selected > span {
   }
 
 #advancesearchfilters ul.advancesearch>li button {
-    color: #06c;
+    color: #07c;
 }
 
 #advancesearchfilters ul.advancesearch>li:first-child {
@@ -183,7 +183,7 @@ a.selecty-selected > span {
 
 #advancesearchfilters ul.advancesearch>li {
     float: left;
-    padding: 0 5px;
+    padding: 0 9px;
     border-left: 1px solid #bcbec0;
 }
 
