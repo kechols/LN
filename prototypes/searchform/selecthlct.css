@@ -111,4 +111,9 @@ span.selectOptionGroup {
 	background: darkgray;
     color: white;
 }
+
+span.icon:before {
+	color: #fff;
+	float: right;
+}
 		
