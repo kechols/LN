@@ -34,7 +34,8 @@
 .hummingbird-treeview *
 {
     list-style: none;
-    font-size: 15px;
+    font-family: Lato;
+    font-size: 14px;
 }
 
 .hummingbird-treeview label {
@@ -114,7 +115,7 @@
 .hummingbird-treeview .icon::after, .hummingbird-treeview .icon::before {
     font-weight:bold;
     color:#5A90DC;
-    font-size:1.2em;
+    font-size:14px;
 }
 
 .hummingbird-treeview .fa, .hummingbird-treeview .icon {
