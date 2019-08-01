@@ -8,7 +8,7 @@
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/selecty.js?1
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/selecthlct.js?1
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/styles.css?1
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/styles.css?2468
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/selecty.css?1
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/juris.html?1
@@ -93,9 +93,10 @@
         // kechols -clone and put the addvance search and tips under more options
         $(".advancesearch li button")[1].textContent = "Tips";
         $("#advancesearchfilters").append($(".advancesearch").clone());
-        // kechols - hide the original location from the eyes but leave for clicking
-        // $(".landing.searchbox .advancesearch button").css({"color":"fff"});
-        // $("ul.advancesearch").hide();
+        // kechols - Hide the original advance search
+        $($("ul.advancesearch.showusinternationallink")[0]).hide();
+        // kechols - hide the tips for AU
+        $($(".asfcontentmenu")[1]).hide()
         // Pass the click events to the original buttons
         $('#advancesearchfilters ul.advancesearch>li button').each(function(index){
             $($(".landing.searchbox .advancesearch>li")[index]).css({"border" : "0"});
