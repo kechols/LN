@@ -101,20 +101,19 @@ span.selectOption{
 }
 
 span.selectOption:hover, span.selectOptionGroup:hover {
-	color: #f6f6f6;
-	background: #4096ee;
+	background: #eaf7fc;
 }
 
 span.selectOptionGroup {
 	display: block;
 	background: #f4f4f5;
-	color: #6d6e71;
+	color: #373739;
 	line-height: 31px;
 }
 
 .icon:after {
 	float: right;
-	color: #6d6e71;
+	color: #373739;
 	line-height: 31px;
 }
 		
