@@ -112,7 +112,7 @@ span.selectOptionGroup {
     color: white;
 }
 
-span.icon:before {
+span.icon:after {
 	color: #fff;
 	float: right;
 }
