@@ -86,13 +86,13 @@ span.selectOption, span.selectOptionGroup {
 }
 
 span.selectOptionGroup{
-	font-weight: bold;
 	white-space: nowrap;
 }
 
 span.selectOption{
 	font-size: 1.6rem;
 	background: #fff;
+	color: 000;
 }
 
 
