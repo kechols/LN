@@ -109,10 +109,12 @@ span.selectOptionGroup {
 	display: block;
 	background: #f4f4f5;
 	color: #6d6e71
+	line-height: 31px;
 }
 
 .icon:after {
 	float: right;
 	color: #6d6e71
+	line-height: 31px;
 }
 		
