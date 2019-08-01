@@ -1,3 +1,92 @@
+/* Beginning of new stuff */
+@media screen and (min-width: 760px) {
+    .searchbox-wrapper .searchbox-main .search-input-wrapper search-input > label {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 817px) {
+    .searchbox-wrapper .flex {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .searchbox-wrapper .filters-right .content-type-panel {
+        margin-bottom: 0;
+    }
+
+    .searchbox-wrapper .jurisdiction-panel {
+        width: calc(50% - 15px);
+        margin: 0 0 34px 0;
+    }
+}
+
+@media screen and (min-width: 1207px) {
+    .searchbox-wrapper .filters-right .searchbox-main {
+        margin-bottom: 0;
+        width: calc(60% - 54px);
+    }
+
+    .searchbox-wrapper .filters-right .content-type-panel {
+        margin-left: -1px;
+    }
+
+    .searchbox-wrapper .content-type-panel {
+        width: 20%;
+        margin: 0;
+    }
+
+    .searchbox-wrapper .filters-right .jurisdiction-panel {
+        margin-left: -1px;
+    }
+}
+
+.searchbox-wrapper {
+    margin-bottom: 36px;
+    position: relative;
+    font-family: Lato;
+    font-size: 100%;
+    font: inherit;
+    font-size-adjust: auto;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: baseline;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+label {
+    font-size: 14px;
+    margin-bottom: 9px;
+    color: #373739;
+}
+
+.searchbox-wrapper .searchbox-main .search-input-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.searchbox-wrapper *, .searchbox-wrapper *::before, .searchbox-wrapper *::after {
+    box-sizing: border-box;
+}
+
+.searchbox-wrapper .searchbox-main .search-input-wrapper .search-input-and-autosuggest-wrapper {
+    flex-grow: 1;
+    width: 0;
+}
+
+.searchbox-wrapper .searchbox-main .search-input-wrapper search-input > .expandingtextarea-wrapper {
+    z-index: 3;
+}
+
+.searchbox-wrapper .filters-right .jurisdiction-panel {
+    margin-bottom: 0;
+}
+
+/* End of new stuff */
+
 /* Container styling */
 .searchsection {
     /* kechols comment out background color */
