@@ -1,3 +1,7 @@
+.la-TriangleUpAfter:after {
+	content: "\e607";
+}
+
 .content-type-label {
 	height:0px;
 }
