@@ -139,7 +139,7 @@ a.selecty-selected > span {
 .prefilter.moreopts .selecty .selecty-options li:first-child { display:none; }
 
 
-.hlct.prefilter, .juris.prefilter {
+.juris.prefilter {
     width: 256px !important;
     min-width: 256px !important;
 }
