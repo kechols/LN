@@ -112,15 +112,8 @@ span.selectOptionGroup {
 
 .icon:after {
 	float: right;
+	color: #000;
 	line-height: 31px;
-	font-family: GVS_Icons;
-    font-style: normal;
-    color: #000;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
 }
 
 .hlct-flag {
