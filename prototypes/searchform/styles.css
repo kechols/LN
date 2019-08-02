@@ -140,8 +140,8 @@ a.selecty-selected > span {
 
 
 .hlct.prefilter, .juris.prefilter {
-    width: 256;
-    min-width: 256;
+    width: 256px;
+    min-width: 256px;
 }
 
 .searchsection .prefilter {
