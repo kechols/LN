@@ -9,12 +9,16 @@
 div.selectBox {
 	position: relative;
 	display: inline-block;
-	cursor: default;
 	text-align: left;
 	line-height: 30px;
 	clear: both;
-	color: #888;
+	color: #000;
 	height: 100%
+	cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 span.selected {
