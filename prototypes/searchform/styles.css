@@ -138,6 +138,11 @@ a.selecty-selected > span {
 
 .prefilter.moreopts .selecty .selecty-options li:first-child { display:none; }
 
+/*
+ * kechols
+ * Probably no longer needed because search, hlct, juris all share grid
+ *
+
 .searchsection .juris {
   grid-column-start: 3; 
   grid-column-end: 7; 
@@ -147,7 +152,7 @@ a.selecty-selected > span {
   grid-column-start: 1; 
   grid-column-end: 3;   
 }
-
+*/
 .searchsection .prefilter {
   min-width:0px;
   background:#fff;
