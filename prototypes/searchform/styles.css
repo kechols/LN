@@ -85,6 +85,17 @@ label {
     margin-bottom: 0;
 }
 
+.landing-page-only-white-searchbox-background-div {
+    height: 1000px;
+    background: #fff;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    position: absolute;
+    z-index: -1;
+    bottom: 20px;
+    border-bottom: 1px solid #d7dadb;
+}
+
 /* End of new stuff */
 
 /* Container styling */
