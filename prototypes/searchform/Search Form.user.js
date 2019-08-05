@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AU Search Form
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  New landing page search form
 // @author       Kevin Echols
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
