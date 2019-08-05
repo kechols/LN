@@ -6,16 +6,16 @@
 // @author       Kevin Echols
 // @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
-// @require      https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/selecty.js?1
-// @require      https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/selecthlct.js?1
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/styles.css?2468
-// @resource     selectycss https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/selecty.css?1
-// @resource     juriscss https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/hummingbird-treeview.css
-// @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/juris.html?1
-// @resource     selecthlct https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/selecthlct.html?1
-// @resource     selecthlctcss https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/selecthlct.css?1
-// @resource     myfiltershtml https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/myfilters.html?1
-// @resource     myfilterscss https://raw.githubusercontent.com/kechols/LN/au_version2/prototypes/searchform/myfilters.css?1
+// @require      https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecty.js?1
+// @require      https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecthlct.js?1
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/styles.css?1
+// @resource     selectycss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecty.css?1
+// @resource     juriscss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/hummingbird-treeview.css
+// @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/juris.html?1
+// @resource     selecthlct https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecthlct.html?1
+// @resource     selecthlctcss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecthlct.css?1
+// @resource     myfiltershtml https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/myfilters.html?1
+// @resource     myfilterscss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/myfilters.css?1
 // @match        https://advance.lexis.com/pacificresearchhome/*
 // @match        https://advance.lexis.com/firsttime*
 // @match        https://advance.lexis.com/search*
