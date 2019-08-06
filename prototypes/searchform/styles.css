@@ -42,6 +42,31 @@
     }
 }
 
+.searchbox-main {
+    height: 80px;
+    position: relative;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.searchbox-main .search-input-wrapper {
+    position: relative;
+    display: flex;
+}
+
+
+search-input searchbox-main .search-input-wrapper {
+    width: 100%;
+}
+
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;		
+}
+
 .searchbox-wrapper {
     margin-bottom: 36px;
     position: relative;
@@ -90,6 +115,7 @@ label {
     position: absolute;    
     z-index: -1;    
     bottom: 20px;
+    border-bottom: 1px solid #d7dadb;
 }
 
 /* End of new stuff */
