@@ -79,13 +79,12 @@ label {
 
 .landing-page-only-white-searchbox-background-div {
     height: 1000px;
-    background: #fff;
+    background: white;
     width: 100vw;
     left: calc(-50vw + 50%);
-    position: absolute;
-    z-index: -1;
+    position: absolute;    
+    z-index: -1;    
     bottom: 20px;
-    border-bottom: 1px solid #d7dadb;
 }
 
 /* End of new stuff */
