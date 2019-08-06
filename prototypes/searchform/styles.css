@@ -60,6 +60,11 @@ label {
     display: flex;
 }
 
+.search-input-and-autosuggest-wrapper{                
+    flex-grow: 1;
+    width: 0;
+}
+
 .searchbox-wrapper *, .searchbox-wrapper *::before, .searchbox-wrapper *::after {
     box-sizing: border-box;
 }
