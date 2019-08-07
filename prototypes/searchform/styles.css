@@ -32,11 +32,10 @@
         margin-left: -1px;
     }
 
-    .searchbox-wrapper .content-type-panel {
+    .searchbox-wrapper .content-type-panel, .searchbox-wrapper .jurisdiction-panel {
         width: 20%;
         margin: 0;
     }
-
     .searchbox-wrapper .filters-right .jurisdiction-panel {
         margin-left: -1px;
     }
@@ -49,7 +48,7 @@
     width: 100%;
 }
 
-.ussearch-panel {
+.searchbox-wrapper .ussearch-panel {
     height: 80px;
 }
 
