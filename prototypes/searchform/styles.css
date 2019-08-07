@@ -36,8 +36,25 @@
         width: 20%;
         margin: 0;
     }
+
     .searchbox-wrapper .filters-right .jurisdiction-panel {
         margin-left: -1px;
+    }
+
+    .searchbox-wrapper .jurisdiction-panel {
+        margin-left: -1px;
+    }
+
+    .searchbox-wrapper .filters-right>search-button {
+        margin-top: 26px;
+    }
+
+    .searchbox-wrapper .search-button {
+        margin-top: 26px;
+    }
+
+    .searchbox-wrapper .search-button {
+        margin-top: 26px;
     }
 }
 
