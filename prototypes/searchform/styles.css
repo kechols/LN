@@ -62,14 +62,27 @@
     margin-top: -26px !important;
     width: 55px !important;
     height: 55px !important;
-    color: #fff !important;
-    font-size: 19px !important;
+    color: #fff important;
     box-shadow: none;
     text-shadow: none;
 	background: #ed1c24;
     box-shadow: inset 0 0 0 0 #be161d;
     text-shadow: 1px 1px 1px #be161d;
     transition: all ease .4s;
+}
+
+.search-button > button.la-Search:before {
+    font-size: 30px;
+}
+
+.search-button > button.la-Search::before {
+    color: #fff !important;
+}
+
+<style>
+.searchbox button.la-Search:before {
+    color: #fff;
+    font-size: 19px;
 }
 
 .searchbox-main {
