@@ -106,6 +106,7 @@
 search-input .searchbox-main .search-input-wrapper {
     width: 100%;
 }
+
 .flex {
     display: flex;
     justify-content: center;
@@ -202,6 +203,13 @@ label {
     z-index: -1;    
     bottom: 20px;
     border-bottom: 1px solid #d7dadb;
+}
+
+.searchbox-wrapper .filters-right .search-options-wrapper {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
 }
 
 /* End of new stuff */
