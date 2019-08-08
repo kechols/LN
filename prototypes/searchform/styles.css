@@ -112,7 +112,12 @@ search-input .searchbox-main .search-input-wrapper {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: -36px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;		
 }
 
 .searchbox-wrapper {
