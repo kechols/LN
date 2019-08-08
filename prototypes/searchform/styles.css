@@ -107,10 +107,12 @@ search-input .searchbox-main .search-input-wrapper {
     width: 100%;
 }
 
-.flex {
+.flex .top-panels .filters-right {
     display: flex;
-    justify-content: center;
-    flex-direction: column;		
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -36px;
 }
 
 .searchbox-wrapper {
@@ -210,10 +212,6 @@ label {
     display: flex;
     justify-content: flex-end;
     z-index: 2;
-}
-
-.narrowbyselectionslist-wrapper {
-    margin-top: 10px;
 }
 
 .more-options-tray-wrapper {
