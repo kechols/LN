@@ -212,6 +212,14 @@ label {
     z-index: 2;
 }
 
+.narrowbyselectionslist-wrapper {
+    margin-top: 10px;
+}
+
+.more-options-tray-wrapper {
+    margin-top: 40px;
+}
+
 /* End of new stuff */
 
 /* Container styling */
