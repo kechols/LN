@@ -1,17 +1,11 @@
-.searchsection .myfilters {
-    grid-column-start: 6; 
-    grid-column-end: 7;
-    width: 250px;
-    margin-top: -5px;
-  }
 
-#myfilters ul.remembermyfilters>li:first-child {
+.search-options-wrapper ul.remembermyfilters>li:first-child {
     padding-left: 0;
     border-left: none;
 }
 
-#myfilters ul.remembermyfilters>li {
-    float: left;
+.search-options-wrapper  ul.remembermyfilters>li {
     padding: 0 10px;
 	border-left: 1px solid #bcbec0;
 }
+
