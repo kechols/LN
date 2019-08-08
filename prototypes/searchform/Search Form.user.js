@@ -14,8 +14,8 @@
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/juris.html?1
 // @resource     selecthlct https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecthlct.html?1
 // @resource     selecthlctcss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecthlct.css?1
-// @resource     myfiltershtml https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/myfilters.html?1
-// @resource     myfilterscss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/myfilters.css?1
+// @resource     myfiltershtml https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/myfilters.html?01
+// @resource     myfilterscss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/myfilters.css?01
 // @match        https://advance.lexis.com/pacificresearchhome/*
 // @match        https://advance.lexis.com/firsttime*
 // @match        https://advance.lexis.com/search*
@@ -56,27 +56,16 @@
         GM_addStyle (selecthlctCSS);
         GM_addStyle (myfiltersCSS);
 
-        // kechols - remove country selector from search box
-        $("span.continents").hide();
+        layoutSearchFields();
 
-        // kechols - remove options like search everything next to searcbox
-        $("section span.options").hide();
-        layoutSearchForm();
+        layoutRememberMyFilters();
 
-
-
-
-       
-        // $("#mainSearch").append($(".flex"));
-        $("div.hlct.prefilter").append(selecthlctHTML);
-        // $(".searchbox-main").appendTo("#mainSearch");
-        // $(".searchbox-main").hide();
         // $(".input").css({"border": "1px solid #d2d4d5"});
 
         enableSelectBoxes();
 
-
         //INJECT MORE OPTIONS
+        /*
         $('.searchsection > div')
             .append(myfiltersHTML)
             .append('<div class="divider moreopts"></div>')
@@ -84,6 +73,7 @@
             .append('<div style="border:0" class="prefilter moreopts"><label for="favs">recent and favorite filters</label><div class="prefilter moreopts favs"><select id="favs"><option>View Recent and Favorite Filters</option></select></div></div>')
             .append('<div id="advancesearchfilters" class="moreopts"></div>')
             .append('<div class="moreoptions"><button type="button"></button></div>');
+        */
 
         // kechols -clone and put the addvance search and tips under more options
         $(".advancesearch li button")[1].textContent = "Tips";
@@ -263,7 +253,20 @@
     }
 
 
-    function layoutSearchForm() {
+    function layoutRememberMyFilters() {
+        var rightCheckboxFilters = '<div class="filters-right"><div class="search-options-wrapper"></div></div>';
+        $(".kevins-container").append($(rightCheckboxFilters));
+        $('.search-options-wrapper').append(GM_getResourceText ("myfiltershtml"));
+    }
+
+
+    function layoutSearchFields() {
+        // kechols - remove country selector from search box
+        $("span.continents").hide();
+
+        // kechols - remove options like search everything next to searcbox
+        $("section span.options").hide();
+
         // kechols before new css
         // Wrap search section in container (grid)
         // $('.pod-wrapper.searchbox').wrap( "<div class='searchsection'><div></div></div>" );
@@ -282,6 +285,8 @@
         $(juris).appendTo($(".flex"));
         $(search_button).appendTo($(".flex"));
         $("#mainSearch").appendTo($(".search-button"));
+
+        $("div.hlct.prefilter").append(GM_getResourceText("selecthlct"));
     }
 
 
@@ -396,7 +401,6 @@
                 };
             }
         }
-
 
 
         /*
