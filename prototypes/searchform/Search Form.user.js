@@ -8,7 +8,7 @@
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecty.js?1
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecthlct.js?1
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/styles.css?1
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/styles.css?11011
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecty.css?1
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/juris.html?1
@@ -56,27 +56,22 @@
         GM_addStyle (selecthlctCSS);
         GM_addStyle (myfiltersCSS);
 
-        //REMOVE UNUSED ELEMENTS
-        // $(".highlanderpod, .getadoc, .searchbox .options").remove();
-        // $(".ct-landing-wrapper").removeClass("pagewrapper");
-
         // kechols - remove country selector from search box
         $("span.continents").hide();
 
         // kechols - remove options like search everything next to searcbox
         $("section span.options").hide();
-
-        //Wrap search section in container (grid)
-        $('.pod-wrapper.searchbox').wrap( "<div class='searchsection'><div></div></div>" );
+        layoutSearchForm();
 
 
-        //INJECT HLCT, JURIS, ETC.
-        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions"><i>All Jurisdictions</i></a></div></div>';
-        var hlct = '<div class="hlct prefilter"></div>';
-        $(juris).insertAfter($(".input"));
-        $(hlct).insertAfter($(".input"));
+
+
+       
+        // $("#mainSearch").append($(".flex"));
         $("div.hlct.prefilter").append(selecthlctHTML);
-        $(".input").css({"border": "1px solid #d2d4d5"});
+        // $(".searchbox-main").appendTo("#mainSearch");
+        // $(".searchbox-main").hide();
+        // $(".input").css({"border": "1px solid #d2d4d5"});
 
         enableSelectBoxes();
 
@@ -265,6 +260,28 @@
             }
         });
 
+    }
+
+
+    function layoutSearchForm() {
+        // kechols before new css
+        // Wrap search section in container (grid)
+        // $('.pod-wrapper.searchbox').wrap( "<div class='searchsection'><div></div></div>" );
+
+        $('.pod-wrapper.searchbox').wrap("<div class='searchbox-main'><div class='search-input-wrapper'><div class='search-input-and-autosuggest-wrapper'></div></div></div>");
+        $('.searchbox-main').wrap("<div class='flex top-panels filters-right'></div>");
+        $('.flex').wrap("<div class='searchbox-wrapper'><div class='kevins-container'></div></div>");
+        $('.kevins-container').prepend("<div class='landing-page-only-white-searchbox-background-div'></div>");
+
+        //INJECT HLCT, JURIS, ETC.
+        var juris = '<div class="ussearch-panel jurisdiction-panel"><div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions"><i>All Jurisdictions</i></a></div></div></div>';
+        var hlct = '<div class="ussearch-panel content-type-panel"><div class="hlct prefilter"></div></div>';
+        var search_button = '<div class="search-button"></div>';
+
+        $(hlct).appendTo($(".flex"));
+        $(juris).appendTo($(".flex"));
+        $(search_button).appendTo($(".flex"));
+        $("#mainSearch").appendTo($(".search-button"));
     }
 
 
