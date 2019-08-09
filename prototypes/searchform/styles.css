@@ -114,7 +114,8 @@ label {
 .searchsection button { outline:none !important; }
 
 .searchsection > div {
-    max-width: 1280px;
+    /* kechols comment out to make it search form wider */
+    /*  max-width: 1280px; */
     margin:0 auto;
     display: grid;
     column-gap: 30px;
@@ -392,7 +393,8 @@ a.selecty-selected > span {
 }
 
 .pod-wrapper.browse {
-    max-width: 1280px;
+    /* kechols comment out to make it search form wider */
+    /*  max-width: 1280px; */
     margin-left: auto;
     margin-right: auto;
 }
