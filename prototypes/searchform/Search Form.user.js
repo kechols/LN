@@ -8,7 +8,7 @@
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecty.js?1
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecthlct.js?1
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/styles.css?11011
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/styles.css?0011
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecty.css?1
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/juris.html?1
@@ -16,6 +16,8 @@
 // @resource     selecthlctcss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/selecthlct.css?1
 // @resource     myfiltershtml https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/myfilters.html?01
 // @resource     myfilterscss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/myfilters.css?01
+// @resource     narrowbyhtml https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/narrowbyselections.html?1
+// @resource     narrowbycss https://raw.githubusercontent.com/kechols/LN/au_version3/prototypes/searchform/narrowbyselections.css?1
 // @match        https://advance.lexis.com/pacificresearchhome/*
 // @match        https://advance.lexis.com/firsttime*
 // @match        https://advance.lexis.com/search*
@@ -47,7 +49,8 @@
             selecthlctHTML = GM_getResourceText ("selecthlct"),
             selecthlctCSS = GM_getResourceText ("selecthlctcss"),
             myfiltersHTML = GM_getResourceText ("myfiltershtml"),
-            myfiltersCSS = GM_getResourceText ("myfilterscss");
+            myfiltersCSS = GM_getResourceText ("myfilterscss"),
+            narrowbyCSS = GM_getResourceText ("narrowbycss");
 
         GM_addStyle (customCSS);
         GM_addStyle (selectyCSS);
@@ -55,10 +58,14 @@
         GM_addStyle (faCSS);
         GM_addStyle (selecthlctCSS);
         GM_addStyle (myfiltersCSS);
+        GM_addStyle (narrowbyCSS);
 
         layoutSearchFields();
 
         layoutRememberMyFilters();
+
+        layoutNarrowByFilters();
+
 
         // $(".input").css({"border": "1px solid #d2d4d5"});
 
@@ -67,7 +74,6 @@
         //INJECT MORE OPTIONS
         /*
         $('.searchsection > div')
-            .append(myfiltersHTML)
             .append('<div class="divider moreopts"></div>')
             .append('<div style="border:0" class="prefilter moreopts"><label for="pat">practice areas</label><div class="prefilter moreopts pat"><select multiple id="pat"><option>All Practice Areas</option></select></div></div>')
             .append('<div style="border:0" class="prefilter moreopts"><label for="favs">recent and favorite filters</label><div class="prefilter moreopts favs"><select id="favs"><option>View Recent and Favorite Filters</option></select></div></div>')
@@ -250,6 +256,13 @@
             }
         });
 
+    }
+
+
+    function layoutNarrowByFilters() {
+        var narrowByFilters = '<div class="narrowbyselectionslist-wrapper"></div>';
+        $(".kevins-container").append($("narrowByFilters"));
+        $('.narrowbyselectionslist-wrapper').append(GM_getResourceText ("narrowbyhtml"));
     }
 
 
