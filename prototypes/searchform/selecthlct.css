@@ -11,6 +11,7 @@
 }
 
 div.selectBox {
+	font-family: Lato;
 	position: relative;
 	display: inline-block;
 	cursor: pointer;
@@ -27,7 +28,7 @@ div.selectBox {
 
 span.selected {
 	margin-top: 12px;
-	font-size: 2.0rem;
+	font-size: 1.8rem;
 	width: 235px;
 	text-indent: 20px;
 	border-right: none;
