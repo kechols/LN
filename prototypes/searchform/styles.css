@@ -90,7 +90,7 @@ label {
 /* Container styling */
 
 .searchbox .input {
-    border: none;
+    border: none !important;
 }
 
 .input, .expandingTextarea.shown.enablescrollbar, #searchTerms{
