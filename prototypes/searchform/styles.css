@@ -88,6 +88,11 @@ label {
 /* End of new stuff */
 
 /* Container styling */
+.input {
+    font-family: Lato !important;
+    font-size: 20px;
+}
+
 .searchsection {
     /* kechols comment out background color */
     /* background: #e9e9ea; */
