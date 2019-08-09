@@ -128,6 +128,9 @@ label {
     grid-template-columns: repeat(6, 1fr)
 }
 
+.popup.searchmodeswitch section div label {
+    margin-top: 0px !important;
+}
 
 
 /* Filters */
