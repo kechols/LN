@@ -128,8 +128,13 @@ label {
     grid-template-columns: repeat(6, 1fr)
 }
 
+/* AU mode switch changes */
 .popup.searchmodeswitch section div label {
     margin-top: 0px !important;
+}
+
+.modeswitch > label {
+    margin-bottom: 0px;
 }
 
 
