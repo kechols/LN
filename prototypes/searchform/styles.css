@@ -88,14 +88,11 @@ label {
 /* End of new stuff */
 
 /* Container styling */
-.input {
+.input, .expandingTextarea.shown.enablescrollbar, #searchTerms{
     font-family: Lato !important;
     font-size: 20px;
 }
 
-.expandingTextarea.shown.enablescrollbar {
-    font-size: 20px;
-}
 
 .searchsection {
     /* kechols comment out background color */
