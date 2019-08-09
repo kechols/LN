@@ -8,7 +8,7 @@
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version4/prototypes/searchform/selecty.js?1
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version4/prototypes/searchform/selecthlct.js?1
-// @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version4/prototypes/searchform/styles.css?2468
+// @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version4/prototypes/searchform/styles.css?1
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/au_version4/prototypes/searchform/selecty.css?1
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/au_version4/prototypes/searchform/hummingbird-treeview.css
 // @resource     jurishtml https://raw.githubusercontent.com/kechols/LN/au_version4/prototypes/searchform/juris.html?1
@@ -48,7 +48,7 @@
             selecthlctCSS = GM_getResourceText ("selecthlctcss"),
             myfiltersHTML = GM_getResourceText ("myfiltershtml"),
             myfiltersCSS = GM_getResourceText ("myfilterscss");
-
+debugger;
         GM_addStyle (customCSS);
         GM_addStyle (selectyCSS);
         GM_addStyle (jurisCSS);
