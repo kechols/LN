@@ -144,6 +144,80 @@ label {
     user-select: none;
 }
 
+.styled-checkbox {
+    position: absolute;
+    opacity: 0; 
+}
+
+.styled-checkbox:focus {
+    opacity: 1;    
+}
+
+.styled-checkbox + label span {
+    position: absolute;
+    margin-top: -2px;
+    font-family: Lato,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: left;
+    color: inherit;
+}
+
+.styled-checkbox +  label:before {
+    content: '';
+    margin-right: 7px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 13px;
+    height: 13px;      
+    background: white;
+    border: solid 1px #aaaaaa;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+/* Box checked */
+.styled-checkbox:checked + label:before {
+    background: #0077cc;
+    border: solid 1px #0077cc;
+}
+    
+/* Disabled state label. */
+.styled-checkbox:disabled + label {
+    color: #88888a;
+    cursor: auto;
+}
+  
+/* Disabled box. */
+.styled-checkbox:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+}
+    
+.styled-checkbox:checked + .prefilter-label>span{
+    font-weight: bold;
+}
+    
+/* Checkmark. Could be replaced with an image */
+.styled-checkbox:checked + label:after {
+    content: "";
+    padding: 1px;
+    text-align: center;
+    position: absolute;
+    height: 8px;
+    width: 1px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    top: 2px;
+    left: 5px;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+}
+
 /* end og General */
 /* Filters */
 
