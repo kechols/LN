@@ -89,8 +89,14 @@ label {
 
 /* Container styling */
 
-.searchbox .input .enablescrollbar textarea {
+.searchbox .input .enablescrollbar textarea, .juris.prefilter {
     border: none !important;
+}
+
+.hlct.prefilter {
+    border-left: none !important;
+    border-bottom: none !important;
+    border-top: none !important
 }
 
 .input, .expandingTextarea.shown.enablescrollbar, #searchTerms{
