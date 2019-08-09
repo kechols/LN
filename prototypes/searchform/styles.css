@@ -104,6 +104,11 @@ label {
     font-size: 20px;
 }
 
+.landing.searchbox .popup.searchmodeswitch {
+    left: auto !important;
+    background-color: #000; */
+}
+
 
 .searchsection {
     /* kechols comment out background color */
