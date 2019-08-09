@@ -381,12 +381,13 @@ a.selecty-selected > span {
 }
 
 .searchbox button.la-Search {
-    width:55px !important;
-    height:55px !important;
+    width: 58px!important;
+    height: 58px !important;
     color: #fff;
     box-shadow: none;
     text-shadow: none;
     transition: all ease .4s;
+    border: 1px solid #d9d6d4;
 }
 
 .searchbox button.la-Search:hover {
