@@ -88,6 +88,11 @@ label {
 /* End of new stuff */
 
 /* Container styling */
+
+.searchbox {
+    border: none;
+}
+
 .input, .expandingTextarea.shown.enablescrollbar, #searchTerms{
     font-family: Lato !important;
     font-size: 20px;
@@ -186,7 +191,7 @@ a.selecty-selected > span {
 #advancesearchfilters ul.advancesearch>li {
     float: left;
     padding: 0 9px;
-    /* border-left: 1px solid #bcbec0; */
+    border-left: 1px solid #bcbec0;
 }
 
 
