@@ -93,6 +93,10 @@ label {
     font-size: 20px;
 }
 
+.expandingTextarea.shown.enablescrollbar {
+    font-size: 20px;
+}
+
 .searchsection {
     /* kechols comment out background color */
     /* background: #e9e9ea; */
