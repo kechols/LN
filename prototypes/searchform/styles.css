@@ -333,13 +333,9 @@ a.selecty-selected > span {
     max-width:none !important;
 }
 
-.landing.searchbox .input {
-    height:55px !important;
-    border-right: 1px solid #D2D4D4;
-}
-
-.landing.searchbox .expandingTextarea {
+.landing.searchbox .input,  .landing.searchbox .expandingTextarea {
     min-height:55px;
+    height:55px !important;
 }
 
 .landing.searchbox .input pre, .landing.searchbox .input textarea {
