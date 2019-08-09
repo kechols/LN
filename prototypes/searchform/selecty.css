@@ -1,3 +1,8 @@
+.juris.prefilter { 
+  font-family: Lato;
+}
+
+
 .selecty-select {
   width: 100%;
   display: block;
@@ -30,13 +35,14 @@
 }
 
 .selecty {
+  font-family: Lato;
   width: 100%;
   position: relative;
   font-size: 16px;
   color: #1b1919;
 }
 
-.selecty.disabled .selecty-selected {
+.selecty.disabled .selecty-selected {  
   border-bottom: 1px dashed #d9d6d4;
   cursor: not-allowed;
   color: #8d8480;
@@ -52,7 +58,7 @@
   height: 36px;
   line-height: 36px;
   text-align: left;
-  font-size: 16px;
+  font-size: 18px !important;
   color: #1b1919;
   overflow: hidden;
   text-overflow: ellipsis;
