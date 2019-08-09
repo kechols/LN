@@ -381,7 +381,7 @@ a.selecty-selected > span {
 }
 
 .searchbox button.la-Search {
-    width: 58px!important;
+    width: 58px !important;
     height: 58px !important;
     color: #fff;
     box-shadow: none;
