@@ -71,8 +71,8 @@ debugger;
 
 
         //INJECT HLCT, JURIS, ETC.
-        var juris = '<div class="juris prefilter"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions"><i>All Jurisdictions</i></a></div></div>';
-        var hlct = '<div class="hlct prefilter"></div>';
+        var juris = '<div class="juris prefilter unselectable"><div class="selecty"><a class="selecty-selected" data-placeholder="All Jurisdictions"><i>All Jurisdictions</i></a></div></div>';
+        var hlct = '<div class="hlct prefilter unselectable"></div>';
         $(juris).insertAfter($(".input"));
         $(hlct).insertAfter($(".input"));
         $("div.hlct.prefilter").append(selecthlctHTML);
