@@ -284,6 +284,7 @@ a.selecty-selected > span {
     margin-left:10px;
 }
 
+
 .appliedfilters button > span, span.jurisfilter > span {
     margin-left:10px;
     vertical-align: middle;
@@ -291,6 +292,14 @@ a.selecty-selected > span {
 
 .appliedfilters button > span:before, span.jurisfilter > span:before {
     color: #4A90E2; 
+}
+
+.juris.prefilter .selecty .selecty-selected {
+    padding-top: 10px !important;
+}
+
+.juris.prefilter .selecty .selecty-selected:after {
+    top: 50% !important;
 }
 
 .clearlink { 
