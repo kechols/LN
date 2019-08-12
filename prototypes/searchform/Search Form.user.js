@@ -236,6 +236,10 @@
 
         $(document).on("click",".prefilter > label, .prefilter .selecty-selected",function(e) {
             if($(this).closest(".juris").length) {
+                // kechols - don't show if disabled
+                if ($(this).parent().hasClass("disabled")) {
+                    return;
+                }
                 $('#juris-tree').toggle();
             } else {
                 e.preventDefault();
