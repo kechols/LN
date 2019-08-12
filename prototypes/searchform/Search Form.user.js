@@ -76,7 +76,6 @@
         $(juris).insertAfter($(".input"));
         $(hlct).insertAfter($(".input"));
         $("div.hlct.prefilter").append(selecthlctHTML);
-        $(".input").css({"border": "1px solid #d2d4d5"});
 
         enableSelectBoxes();
 
