@@ -28,7 +28,7 @@ function enableSelectBoxes(){
 			}
 		});
 
-		$(this).find('span.selectOption').click(function(){
+		$(this).find('span.selectOption').click(function(){						
 			var group = $(this).attr("group");
 			// AU specific code to disable Jurisdiction options for NZ
 			if ($(this).attr("group") == 2){
@@ -56,8 +56,16 @@ function enableSelectBoxes(){
 				}
 			});
 			
-			// kechols fix to only have one group opem
+			// kechols - only have one group open
 			$("span[group]").not("[group='" + group + "']").css("display", "none");
+			// kechols - toggle up/down arrow
+			var triangle_span = $(this).children("span");
+			if (triangle_span.hasClass("la-TriangleDownAfter")){
+				triangle_span.removeClass("la-TriangleDownAfter").addClass("la-TriangleUpAfter");
+			}
+			else {
+				triangle_span.removeClass("la-TriangleUpAfter").addClass("la-TriangleDownAfter");
+			}
 		});
 	});
 }
