@@ -29,11 +29,19 @@ function enableSelectBoxes(){
 		});
 
 		$(this).find('span.selectOption').click(function(){
-			var imageHtml = $('<span>').append($('span.selectOptionGroup[value=' + $(this).attr("group") + '] > img').clone()).html();
+			var group = $(this).attr("group");
+			// AU specific code to disable Jurisdiction options for NZ
+			if ($(this).attr("group") == 2){
+				$(".juris.prefilter div.selecty").addClass("disabled");
+			}
+			else {
+				$(".juris.prefilter div.selecty").removeClass("disabled");
+			}
+			var imageHtml = $('<span>').append($('span.selectOptionGroup[value=' + group + '] > img').clone()).html();
 			$(this).parent().parent().css('display','none');
 			$(this).closest('div.selectBox').attr('value',$(this).attr('value'));
 			$(this).parent().parent().siblings('span.selected').html(imageHtml + $(this).html());
-			$("#filter_type").val($(this).attr("group"));
+			$("#filter_type").val(group);
 			$("#filter_value").val($(this).attr("value"));
 		});
 
