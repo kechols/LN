@@ -57,7 +57,10 @@ function enableSelectBoxes(){
 			});
 			
 			// kechols - only have one group open
+			// chilren css
 			$("span[group]").not("[group='" + group + "']").css("display", "none");
+			// arrow css
+			$("span.selectOptionGroup").not("[value='" + group + "']").children("span").removeClass("la-TriangleUpAfter").addClass("la-TriangleDownAfter")
 			// kechols - toggle up/down arrow
 			var triangle_span = $(this).children("span");
 			if (triangle_span.hasClass("la-TriangleDownAfter")){
