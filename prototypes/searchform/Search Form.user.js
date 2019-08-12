@@ -48,7 +48,7 @@
             selecthlctCSS = GM_getResourceText ("selecthlctcss"),
             myfiltersHTML = GM_getResourceText ("myfiltershtml"),
             myfiltersCSS = GM_getResourceText ("myfilterscss");
-debugger;
+
         GM_addStyle (customCSS);
         GM_addStyle (selectyCSS);
         GM_addStyle (jurisCSS);
