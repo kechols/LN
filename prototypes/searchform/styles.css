@@ -498,8 +498,7 @@ a.selecty-selected > span {
 
 .pod-wrapper.browse {
     /* kechols comment out to make it search form wider */
-    /*  max-width: 1280px; */
-    padding: 0 15px
+    max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
 }
