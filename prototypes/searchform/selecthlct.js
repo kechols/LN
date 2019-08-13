@@ -10,6 +10,7 @@ function enableSelectBoxes(){
 		{
 			var selections = $("div.selectOptions.selecty");
 			selections.hide();
+			$(this).removeClass("open"); // change direction of arrow
 		}
 	});
 	
@@ -25,8 +26,7 @@ function enableSelectBoxes(){
 			}
 			else
 			{
-				$(this).parent().children('div.selectOptions').css('display','none');
-				$(this).removeClass("open"); // change direction of arrow
+				$(this).parent().children('div.selectOptions').css('display','none');				
 			}
 		});
 
