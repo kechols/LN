@@ -30,7 +30,7 @@ function enableSelectBoxes(){
 
 		$(this).find('span.selectOption').click(function(){						
 			var group = $(this).attr("group");
-			var countrycode  = $('<span />').html($(this).attr("countrycode"));
+			var countrycode  = $('<span />').html($(this).siblings(".selectOptionGroup").attr("countrycode"));
 			// AU specific code to disable Jurisdiction options for NZ
 			if ($(this).attr("group") == 2){
 				$(".juris.prefilter div.selecty").addClass("disabled");
