@@ -30,7 +30,7 @@ function enableSelectBoxes(){
 
 		$(this).find('span.selectOption').click(function(){						
 			var group = $(this).attr("group");
-			var country = "&nbsp;" + $(this).attr("country");
+			var countrycode  = $('<span />').html($(this).attr("countrycode"));
 			// AU specific code to disable Jurisdiction options for NZ
 			if ($(this).attr("group") == 2){
 				$(".juris.prefilter div.selecty").addClass("disabled");
@@ -40,8 +40,8 @@ function enableSelectBoxes(){
 			}
 			var imageHtml = $('<span>').append($('span.selectOptionGroup[value=' + group + '] > img').clone()).html();
 			$(this).parent().parent().css('display','none');
-			$(this).closest('div.selectBox').attr('value',$(this).attr('value'));
-			$(this).parent().parent().siblings('span.selected').html(imageHtml + $(this).html());
+			$(this).closest('div.selectBox').attr('value', $(this).attr('value'));
+			$(this).parent().parent().siblings('span.selected').html(imageHtml + countrycode + $(this).html());
 			$("#filter_type").val(group);
 			$("#filter_value").val($(this).attr("value"));
 		});
