@@ -56,7 +56,7 @@ span.selectArrow:after{
 	content: "";
     display: inline-block;
     position: absolute;
-    top: 30%;
+    top: 35%;
     right: 10px;
     border: solid black;
     border-width: 0 2px 2px 0;
