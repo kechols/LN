@@ -46,6 +46,7 @@ function enableSelectBoxes(){
 			$(this).parent().parent().siblings('span.selected').html(imageHtml + countrycode + $(this).html());
 			$("#filter_type").val(group);
 			$("#filter_value").val($(this).attr("value"));
+			$("span.selectArrow.open").removeClass("open"); // change direction of arrow
 		});
 
 		$(this).find('span.selectOptionGroup').click(function(){
