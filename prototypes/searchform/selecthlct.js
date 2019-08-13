@@ -18,13 +18,15 @@ function enableSelectBoxes(){
 		$(this).children('span.selected').html($(this).children('div.selectOptions').children('span.selectOption:first').html());
 		$(this).attr('value',$(this).children('div.selectOptions').children('span.selectOption:first').attr('value'));
 
-		$(this).children('span.selected,span.selectArrow').click(function(){
+		$(this).children('span.selected, span.selectArrow').click(function(){
 			if($(this).parent().children('div.selectOptions').css('display') == 'none'){
 				$(this).parent().children('div.selectOptions').css('display','block');
+				$(this).children('span.selectArrow').addClass("open");
 			}
 			else
 			{
 				$(this).parent().children('div.selectOptions').css('display','none');
+				$(this).children('span.selectArrow').removeClass("open");
 			}
 		});
 
