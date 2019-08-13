@@ -10,7 +10,7 @@ function enableSelectBoxes(){
 		{
 			var selections = $("div.selectOptions.selecty");
 			selections.hide();
-			$(this).removeClass("open"); // change direction of arrow
+			$("span.selectArrow.open").removeClass("open"); // change direction of arrow
 		}
 	});
 	
