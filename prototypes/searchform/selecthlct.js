@@ -21,12 +21,12 @@ function enableSelectBoxes(){
 		$(this).children('span.selected, span.selectArrow').click(function(){
 			if($(this).parent().children('div.selectOptions').css('display') == 'none'){
 				$(this).parent().children('div.selectOptions').css('display','block');
-				$(this).children('span.selectArrow').addClass("open");
+				$(this).addClass("open"); // change direction of arrow
 			}
 			else
 			{
 				$(this).parent().children('div.selectOptions').css('display','none');
-				$(this).children('span.selectArrow').removeClass("open");
+				$(this).removeClass("open"); // change direction of arrow
 			}
 		});
 

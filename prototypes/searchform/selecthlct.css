@@ -66,7 +66,7 @@ span.selectArrow:after{
 }
 
 span.selectArrow.open:after{
-    top: 40%;
+    top: 45%;
     transform: rotate(225deg);
 }
 
