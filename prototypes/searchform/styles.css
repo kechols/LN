@@ -109,7 +109,7 @@ label {
 }
 
 #searchmodeswitch {
-    top: 0 !important;
+    top: auto !important;
 }
 
 .landing.searchbox .popup.searchmodeswitch {
