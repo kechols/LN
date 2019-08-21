@@ -590,7 +590,9 @@ h2.sectionheader {
     display:none !important;
 }
 
+/* -- kechols -- show pods for AU
 #grid-container { display:none !important; }
+*/
 
 #loadbox, .sheath { display:none !important; }
 
