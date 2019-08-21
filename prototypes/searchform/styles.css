@@ -97,6 +97,10 @@ label {
     border: none !important;
 }
 
+.hlct-label, .within-label {
+    margin-top: -24px;
+}
+
 .hlct.prefilter {
     border-left: none !important;
     border-bottom: none !important;
