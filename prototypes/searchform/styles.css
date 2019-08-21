@@ -122,6 +122,8 @@ label {
 
 .landing.searchbox .popup.searchmodeswitch {
     left: auto !important;
+    margin-top: 4px;
+    margin-left: -1px;
     background-color: #525355;
 }
 
