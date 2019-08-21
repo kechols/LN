@@ -61,7 +61,7 @@
         // $(".ct-landing-wrapper").removeClass("pagewrapper");
 
         // kechols - remove country selector from search box
-        $("span.continents").hide();
+        $("span.continents").remove();
 
         // kechols - remove options like search everything next to searcbox
         $("section span.options").hide();
@@ -76,6 +76,10 @@
         $(juris).insertAfter($(".input"));
         $(hlct).insertAfter($(".input"));
         $("div.hlct.prefilter").append(selecthlctHTML);
+
+        // Add labels
+        $("section").prepend('<label for="input" class="search-for-label">Search for</label>');
+        $(".juris.prefilter.unselectable").prepend('<div class="within-label"><label>within</label></div>');
 
         enableSelectBoxes();
 
