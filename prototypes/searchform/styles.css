@@ -97,7 +97,7 @@ label {
     border: none !important;
 }
 
-.search-for-label, .hlct-label, .within-label {
+.search-for-label, .within-label {
     margin-top: -24px;
 }
 
