@@ -101,6 +101,10 @@ label {
     margin-top: -24px;
 }
 
+.search-for-label {
+    position: absolute;
+}
+
 .hlct.prefilter {
     border-left: none !important;
     border-bottom: none !important;
