@@ -87,6 +87,12 @@ a.selecty-selected img{
     transform: rotate(45deg);
 }
 
+/* kechols open arrow for ll selecty drop down list */
+.selecty .selecty-selected.open:after {
+  top: 40%;
+  transform: rotate(225deg);
+}
+
 .selecty .selecty-selected:hover, .selecty .selecty-selected:active, .selecty .selecty-selected:focus {
   text-decoration: none;
   background: none;

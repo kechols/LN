@@ -146,7 +146,9 @@ label {
 
 .styled-checkbox {
     position: absolute;
+    /* kechols - comment out to prevent blue flicker
     opacity: 0; 
+    */
 }
 
 .styled-checkbox:focus {

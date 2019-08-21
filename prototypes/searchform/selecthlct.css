@@ -3,7 +3,8 @@
 }
 
 .content-type-label {
-	height:0px;
+	position: absolute;
+    margin-top: -24px;
 }
 
 .content-type-panel{
