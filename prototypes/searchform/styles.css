@@ -108,6 +108,10 @@ label {
     font-size: 20px;
 }
 
+#searchmodeswitch {
+    top: 0 !important;
+}
+
 .landing.searchbox .popup.searchmodeswitch {
     left: auto !important;
     background-color: #000;
