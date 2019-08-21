@@ -541,6 +541,8 @@ span.input {
 }
 */
 
+/*
+kechols - comment out pod
 .browse .globalpod-header {
     display: none;
 }
@@ -556,6 +558,7 @@ span.input {
 .browse ul.tabheaders {
     background:none;
 }
+*/
 
 .browse ul.tabheaders button {
     border:none !important;
