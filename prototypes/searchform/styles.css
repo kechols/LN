@@ -89,6 +89,10 @@ label {
 
 /* Container styling */
 
+.main-content.img-position-Left.img-position-Above {
+    margin-bottom: 20px;
+}
+
 .searchbox .input .enablescrollbar textarea, .juris.prefilter {
     border: none !important;
 }
