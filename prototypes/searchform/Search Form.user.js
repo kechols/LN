@@ -122,7 +122,7 @@
         //FORM SUBMISSION ACTIONS
         $("#searchTerms")
             .val("")
-            .attr("placeholder","Enter a source name, a citation, terms or shep: [citation] to Shepardize®.")
+            .attr("placeholder","Enter terms, publications, or  citation")
             .keyup(function(e) {
                var code = e.keyCode ? e.keyCode : e.which;
                if (code == 13) {  // Enter keycode
