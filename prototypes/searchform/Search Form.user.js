@@ -4,7 +4,6 @@
 // @version      0.6
 // @description  New landing page search form
 // @author       Kevin Echols
-// @require      https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version6/prototypes/searchform/selecty.js?1
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version6/prototypes/searchform/selecthlct.js?1
@@ -401,5 +400,54 @@
         });
         */
     }
+
+
+
+    // from https://gist.github.com/BrockA/2625891
+function waitForKeyElements (selectorTxt,actionFunction,bWaitOnce,iframeSelector)
+{
+    var targetNodes, btargetsFound;
+    if (typeof iframeSelector == "undefined")
+        targetNodes     = $(selectorTxt);
+    else
+        targetNodes     = $(iframeSelector).contents().find (selectorTxt);
+    if (targetNodes  &&  targetNodes.length > 0) {
+        targetNodes.each ( function () {
+            var jThis        = $(this);
+            var alreadyFound = jThis.data ('alreadyFound')  ||  false;
+            if (!alreadyFound) {
+                actionFunction (jThis);
+                jThis.data ('alreadyFound', true);
+            }
+        } );
+        btargetsFound   = true;
+    }
+    else {
+        btargetsFound   = false;
+    }
+
+    var controlObj      = waitForKeyElements.controlObj  ||  {};
+    var controlKey      = selectorTxt.replace (/[^\w]/g, "_");
+    var timeControl     = controlObj [controlKey];
+
+    if (btargetsFound  &&  bWaitOnce  &&  timeControl) {
+        clearInterval (timeControl);
+        delete controlObj [controlKey];
+    }
+    else {
+        if ( ! timeControl) {
+            timeControl = setInterval ( function () {
+                waitForKeyElements (    selectorTxt,
+                                    actionFunction,
+                                    bWaitOnce,
+                                    iframeSelector
+                                   );
+            },500);
+            controlObj [controlKey] = timeControl;
+        }
+    }
+    waitForKeyElements.controlObj   = controlObj;
+}
+
 
 })();
