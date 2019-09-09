@@ -89,7 +89,7 @@
             .append(myfiltersHTML)
             .append('<div class="divider moreopts"></div>')
             .append('<div style="border:0" class="prefilter moreopts"><label for="pat">legal topics</label><div class="prefilter moreopts pat"><select multiple id="pat"><option>All Legal Topics</option></select></div></div>')
-            .append('<div style="border:0" class="prefilter moreopts"><label for="favs">favourites</label><div class="prefilter moreopts favs"><select id="favs"><option>View Favorites</option></select></div></div>')
+            .append('<div style="border:0" class="prefilter moreopts"><label for="favs">favourites</label><div class="prefilter moreopts favs"><select id="favs"><option>View Favourites</option></select></div></div>')
             .append('<div id="advancesearchfilters" class="moreopts"></div>')
             .append('<div class="moreoptions"><button type="button"></button></div>');
 
