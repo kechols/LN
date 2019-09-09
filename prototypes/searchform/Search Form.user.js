@@ -7,6 +7,7 @@
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version6/prototypes/searchform/selecty.js?1
 // @require      https://raw.githubusercontent.com/kechols/LN/au_version6/prototypes/searchform/selecthlct.js?1
+// @require      https://raw.githubusercontent.com/kechols/LN/au_version6/prototypes/searchform/waitforkeyelements.js?1
 // @resource     customcss https://raw.githubusercontent.com/kechols/LN/au_version6/prototypes/searchform/styles.css?1
 // @resource     selectycss https://raw.githubusercontent.com/kechols/LN/au_version6/prototypes/searchform/selecty.css?1
 // @resource     juriscss https://raw.githubusercontent.com/kechols/LN/au_version6/prototypes/searchform/hummingbird-treeview.css
@@ -400,54 +401,4 @@
         });
         */
     }
-
-
-
-    // from https://gist.github.com/BrockA/2625891
-function waitForKeyElements (selectorTxt,actionFunction,bWaitOnce,iframeSelector)
-{
-    var targetNodes, btargetsFound;
-    if (typeof iframeSelector == "undefined")
-        targetNodes     = $(selectorTxt);
-    else
-        targetNodes     = $(iframeSelector).contents().find (selectorTxt);
-    if (targetNodes  &&  targetNodes.length > 0) {
-        targetNodes.each ( function () {
-            var jThis        = $(this);
-            var alreadyFound = jThis.data ('alreadyFound')  ||  false;
-            if (!alreadyFound) {
-                actionFunction (jThis);
-                jThis.data ('alreadyFound', true);
-            }
-        } );
-        btargetsFound   = true;
-    }
-    else {
-        btargetsFound   = false;
-    }
-
-    var controlObj      = waitForKeyElements.controlObj  ||  {};
-    var controlKey      = selectorTxt.replace (/[^\w]/g, "_");
-    var timeControl     = controlObj [controlKey];
-
-    if (btargetsFound  &&  bWaitOnce  &&  timeControl) {
-        clearInterval (timeControl);
-        delete controlObj [controlKey];
-    }
-    else {
-        if ( ! timeControl) {
-            timeControl = setInterval ( function () {
-                waitForKeyElements (    selectorTxt,
-                                    actionFunction,
-                                    bWaitOnce,
-                                    iframeSelector
-                                   );
-            },500);
-            controlObj [controlKey] = timeControl;
-        }
-    }
-    waitForKeyElements.controlObj   = controlObj;
-}
-
-
 })();
