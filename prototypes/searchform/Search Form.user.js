@@ -77,6 +77,10 @@
         $(hlct).insertAfter($(".input"));
         $("div.hlct.prefilter").append(selecthlctHTML);
 
+        // kechols change AU titles
+        $(".title.stacked span").html("Research");
+        $(".content h1").html($(".content h1").html().replace("Pacific", ""));
+
         // Add labels
         $("section").prepend('<label for="input" class="search-for-label">Search for</label>');
         $(".juris.prefilter.unselectable").prepend('<div class="within-label"><label>within</label></div>');
@@ -93,17 +97,18 @@
             .append('<div id="advancesearchfilters" class="moreopts"></div>')
             .append('<div class="moreoptions"><button type="button"></button></div>');
 
+        // Move the advance search option 1st
+        $(".advancesearch").prepend($(".advancesearch li")[1]);
         // kechols -clone and put the addvance search and tips under more options
-        $(".advancesearch li button")[1].textContent = "Tips";
         $("#advancesearchfilters").append($(".advancesearch").clone());
         // kechols - Hide the original advance search
         $($("ul.advancesearch.showusinternationallink")[0]).hide();
         // kechols - hide the tips for AU
-        $($(".asfcontentmenu")[1]).hide()
+        // $($(".asfcontentmenu")[1]).hide()
         // Pass the click events to the original buttons
         $('#advancesearchfilters ul.advancesearch>li button').each(function(index){
             $($(".landing.searchbox .advancesearch>li")[index]).css({"border" : "0"});
-             $($(".landing.searchbox .advancesearch button")[index]).css({"color" : "#fff"});
+            $($(".landing.searchbox .advancesearch button")[index]).css({"color" : "#fff"});
             $(this).click(function() {
                $(".landing.searchbox .advancesearch button")[index].click();
            });
