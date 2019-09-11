@@ -134,6 +134,7 @@ span.selectOptionGroup {
 
 .asfcontentmenu.icon.la-TriangleDownAfter:after {
 	line-height: 20px !important;
+	margin-left: 5px;
 	color: #07c !important;
 }
 
