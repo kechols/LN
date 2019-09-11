@@ -294,11 +294,6 @@ a.selecty-selected > span {
   grid-column-end: 7; 
 }
 
-/* AU title stuff */
-.title.stacked span {
-    content: "Research";
-}
-
 /* kechols - advancesearchfilters and tips */
 .searchsection #advancesearchfilters.moreopts {
     grid-column-start: 1; 
