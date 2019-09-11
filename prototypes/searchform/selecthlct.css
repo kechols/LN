@@ -125,10 +125,15 @@ span.selectOptionGroup {
 	line-height: 31px;
 }
 
+
 .icon:after {
 	float: right;
 	color: #000;
 	line-height: 31px;
+}
+
+.advancesearch li button .icon:after {
+	line-height: 20px !important;
 }
 
 .hlct-flag {
