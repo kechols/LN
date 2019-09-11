@@ -132,8 +132,9 @@ span.selectOptionGroup {
 	line-height: 31px;
 }
 
-.advancesearch li button .icon:after {
+.asfcontentmenu.icon.la-TriangleDownAfter:after {
 	line-height: 20px !important;
+	color: #07c !important;
 }
 
 .hlct-flag {
